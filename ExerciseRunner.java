@@ -30,8 +30,15 @@ public class ExerciseRunner {
         // System.out.println(FloatOperation.divideTwoFloats(5.6f, 6.9f));
 
         // IsEven
-        System.out.println(IsEven.isEven(2));
-        System.out.println(IsEven.isEven(26));
-        System.out.println(IsEven.isEven(57));
+        // System.out.println(IsEven.isEven(2));
+        // System.out.println(IsEven.isEven(26));
+        // System.out.println(IsEven.isEven(57));
+
+        // Chifoumi
+        System.out.println(Chifoumi.getActionBeatenBy(ChifoumiAction.ROCK));
+        System.out.println(Chifoumi.getActionBeatenBy(ChifoumiAction.PAPER));
+        System.out.println(Chifoumi.getActionBeatenBy(ChifoumiAction.SCISSOR));
+
     }
+
 }
