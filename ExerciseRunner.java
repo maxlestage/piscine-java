@@ -40,8 +40,12 @@ public class ExerciseRunner {
         // System.out.println(Chifoumi.getActionBeatenBy(ChifoumiAction.SCISSOR));
 
         // StringLength
-        System.out.println(StringLength.getStringLength("Hello World !"));
-        System.out.println(StringLength.getStringLength(""));
+        // System.out.println(StringLength.getStringLength("Hello World !"));
+        // System.out.println(StringLength.getStringLength(""));
+
+        // StringConcat
+        System.out.println(StringConcat.concat("Hello ", "étudiant !"));
+        System.out.println(StringConcat.concat("", "Hello World !"));
 
     }
 
