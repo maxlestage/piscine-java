@@ -40,18 +40,32 @@ public class ExerciseRunner {
         // System.out.println(Chifoumi.getActionBeatenBy(ChifoumiAction.SCISSOR));
 
         // StringLength
-        // System.out.println(StringLength.getStringLength("Hello World !"));
-        // System.out.println(StringLength.getStringLength(""));
+        /*
+         * System.out.println(StringLength.getStringLength("Hello World !"));
+         * System.out.println(StringLength.getStringLength(""));
+         */
 
         // StringConcat
-        // System.out.println(StringConcat.concat("Hello ", "étudiant !"));
-        // System.out.println(StringConcat.concat("", "Hello World !"));
+        /*
+         * System.out.println(StringConcat.concat("Hello ", "étudiant !"));
+         * System.out.println(StringConcat.concat("", "Hello World !"));
+         */
 
         // StringContain
-        System.out.println(StringContain.isStringContainedIn("Hell", "Highway to Hell"));
-        System.out.println(StringContain.isStringContainedIn("Hell", "Hello World !"));
-        System.out.println(StringContain.isStringContainedIn("Bonjour", "hello World !"));
-        System.out.println(StringContain.isStringContainedIn(null, "hello World !"));
-        System.out.println(StringContain.isStringContainedIn("", "hello World !"));
+        /*
+         * System.out.println(StringContain.isStringContainedIn("Hell",
+         * "Highway to Hell"));
+         * System.out.println(StringContain.isStringContainedIn("Hell",
+         * "Hello World !"));
+         * System.out.println(StringContain.isStringContainedIn("Bonjour",
+         * "hello World !"));
+         * System.out.println(StringContain.isStringContainedIn(null, "hello World !"));
+         * System.out.println(StringContain.isStringContainedIn("", "hello World !"));
+         */
+        // Palindrome
+        System.out.println(Palindrome.isPalindrome("ressasser"));
+        System.out.println(Palindrome.isPalindrome("Bonjour"));
+        System.out.println(Palindrome.isPalindrome("kayak"));
+
     }
 }
