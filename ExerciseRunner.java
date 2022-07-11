@@ -66,6 +66,8 @@ public class ExerciseRunner {
         System.out.println(Palindrome.isPalindrome("ressasser"));
         System.out.println(Palindrome.isPalindrome("Bonjour"));
         System.out.println(Palindrome.isPalindrome("kayak"));
+        System.out.println(Palindrome.isPalindrome("k"));
+        System.out.println(Palindrome.isPalindrome("AbBa"));
 
     }
 }
