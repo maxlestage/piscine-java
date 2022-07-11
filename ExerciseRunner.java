@@ -35,9 +35,13 @@ public class ExerciseRunner {
         // System.out.println(IsEven.isEven(57));
 
         // Chifoumi
-        System.out.println(Chifoumi.getActionBeatenBy(ChifoumiAction.ROCK));
-        System.out.println(Chifoumi.getActionBeatenBy(ChifoumiAction.PAPER));
-        System.out.println(Chifoumi.getActionBeatenBy(ChifoumiAction.SCISSOR));
+        // System.out.println(Chifoumi.getActionBeatenBy(ChifoumiAction.ROCK));
+        // System.out.println(Chifoumi.getActionBeatenBy(ChifoumiAction.PAPER));
+        // System.out.println(Chifoumi.getActionBeatenBy(ChifoumiAction.SCISSOR));
+
+        // StringLength
+        System.out.println(StringLength.getStringLength("Hello World !"));
+        System.out.println(StringLength.getStringLength(""));
 
     }
 

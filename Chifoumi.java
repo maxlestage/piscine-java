@@ -14,7 +14,6 @@ public class Chifoumi {
             }
             default:
                 return ChifoumiAction.NONE;
-
         }
     }
 }
