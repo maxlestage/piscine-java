@@ -54,5 +54,4 @@ public class ExerciseRunner {
         System.out.println(StringContain.isStringContainedIn(null, "hello World !"));
         System.out.println(StringContain.isStringContainedIn("", "hello World !"));
     }
-
 }
