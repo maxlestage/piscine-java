@@ -4,6 +4,6 @@ public class Palindrome {
         for (String part : s.split(" ")) {
             reversed = new StringBuilder(part).reverse().toString();
         }
-        return reversed.equals(s);
+        return reversed.toUpperCase().equals(s.toUpperCase());
     }
 }
