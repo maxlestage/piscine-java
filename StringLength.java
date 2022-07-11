@@ -1,5 +1,10 @@
 public class StringLength {
     public static int getStringLength(String s) {
-        return s.length();
+        if (s.length() > 1) {
+            return s.length();
+        } else {
+            return 0;
+        }
+
     }
 }
