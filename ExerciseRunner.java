@@ -71,5 +71,11 @@ public class ExerciseRunner {
          * System.out.println(Palindrome.isPalindrome("AbBa"));
          */
 
+        // ComputeArray
+        int[] array = ComputeArray.computeArray(new int[] { 9, 13, 8, 23, 1, 0, 89 });
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
+
     }
 }
