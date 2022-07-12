@@ -76,6 +76,10 @@ public class ExerciseRunner {
         for (int i : array) {
             System.out.print(i + " ");
         }
+        int[] array2 = ComputeArray.computeArray(new int[] {});
+        for (int i : array2) {
+            System.out.print(i + " ");
+        }
 
     }
 }

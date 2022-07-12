@@ -10,23 +10,25 @@ public class ComputeArray {
 
         int[] my_arr = new int[array.length];
 
-        for (int i = 0; i < array.length; i++) {
+        if (array != null) {
+            for (int i = 0; i < array.length; i++) {
 
-            if (array[i] % 3 == 0) {
-                array[i] = array[i] * 5;
-                my_arr[i] = array[i];
+                if (array[i] % 3 == 0) {
+                    array[i] = array[i] * 5;
+                    my_arr[i] = array[i];
 
-            } else if ((array[i] % 3) == 1) {
-                array[i] = array[i] + 7;
-                my_arr[i] = array[i];
+                } else if ((array[i] % 3) == 1) {
+                    array[i] = array[i] + 7;
+                    my_arr[i] = array[i];
 
-            } else if ((array[i] * 3) == 2) {
-                my_arr[i] = array[i];
+                } else if ((array[i] * 3) == 2) {
+                    my_arr[i] = array[i];
 
-            } else {
-                my_arr[i] = array[i];
+                } else {
+                    my_arr[i] = array[i];
+                }
+
             }
-
         }
 
         return my_arr;
