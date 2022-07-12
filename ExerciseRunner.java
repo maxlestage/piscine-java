@@ -113,6 +113,8 @@ public class ExerciseRunner {
                 ListSearchIndex.findAllIndexes(List.of(43784, 327, 1903, 3847, 327, 327, 3289), 43784).toString());
         System.out.println(
                 ListSearchIndex.findAllIndexes(List.of(43784, 327, 1903, 3847, 327, 327, 3289), 43784));
+        System.out.println(
+                ListSearchIndex.findAllIndexes(List.of(28, 4893, 438, 54857, 4374, 4893, 48394), 4893));
 
     }
 }
