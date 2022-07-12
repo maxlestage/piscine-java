@@ -31,7 +31,12 @@ public class ListSearchIndex {
 
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
         List<Integer> list_perso = new ArrayList<Integer>();
-        if (!list.isEmpty() || value != null) {
+
+        if (value == null) {
+            return null;
+        }
+
+        if (!list.isEmpty()) {
 
             if (list.indexOf(value) != list.lastIndexOf(value)) {
                 list_perso.add(list.indexOf(value));
@@ -39,15 +44,17 @@ public class ListSearchIndex {
                 return list_perso;
 
             } else if (list.indexOf(value) == list.lastIndexOf(value)) {
-                list_perso.add(list.indexOf(value));
+                if (list.indexOf(value) >= 0) {
+                    list_perso.add(list.indexOf(value));
+                }
                 return list_perso;
 
             } else {
-                return null;
+                return list_perso;
             }
 
         } else {
-            return null;
+            return list_perso;
         }
 
     }
