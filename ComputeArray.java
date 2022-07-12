@@ -8,9 +8,8 @@ public class ComputeArray {
          * is.
          */
 
-        int[] my_arr = new int[array.length];
-
         if (array != null) {
+            int[] my_arr = new int[array.length];
             for (int i = 0; i < array.length; i++) {
 
                 if (array[i] % 3 == 0) {
@@ -29,8 +28,10 @@ public class ComputeArray {
                 }
 
             }
+            return my_arr;
+        } else {
+            return null;
         }
 
-        return my_arr;
     }
 }
