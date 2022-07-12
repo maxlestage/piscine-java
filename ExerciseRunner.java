@@ -99,6 +99,6 @@ public class ExerciseRunner {
 
         System.out.println(ListContains.containsValue(List.of(9, 13, 8, 23, 1, 0, 89), 8));
         System.out.println(ListContains.containsValue(List.of(9, 13, 8, 23, 1, 0, 89), 10));
-
+        System.out.println(ListContains.containsValue(List.of(28, 438, 54857, 4374, 4893, 48394), 4893));
     }
 }
