@@ -31,15 +31,17 @@ public class ListSearchIndex {
 
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
         List<Integer> list_perso = new ArrayList<Integer>();
-        if (list != null || value != null) {
+        if (list.isEmpty() || value != null) {
 
             if (list.indexOf(value) != list.lastIndexOf(value)) {
                 list_perso.add(list.indexOf(value));
                 list_perso.add(list.lastIndexOf(value));
                 return list_perso;
+
             } else if (list.indexOf(value) == list.lastIndexOf(value)) {
                 list_perso.add(list.indexOf(value));
                 return list_perso;
+
             } else {
                 return null;
             }
