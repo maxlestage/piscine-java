@@ -30,13 +30,23 @@ public class ListSearchIndex {
     }
 
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
+        List<Integer> list_perso = new ArrayList<Integer>();
         if (list != null || value != null) {
-            List<Integer> list_perso = new ArrayList<Integer>();
-            list_perso.add(list.indexOf(value));
-            list_perso.add(list.lastIndexOf(value));
-            return list_perso;
+
+            if (list.indexOf(value) != list.lastIndexOf(value)) {
+                list_perso.add(list.indexOf(value));
+                list_perso.add(list.lastIndexOf(value));
+                return list_perso;
+            } else if (list.indexOf(value) == list.lastIndexOf(value)) {
+                list_perso.add(list.indexOf(value));
+                return list_perso;
+            } else {
+                return null;
+            }
+
         } else {
             return null;
         }
+
     }
 }
