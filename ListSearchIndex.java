@@ -14,7 +14,7 @@ public class ListSearchIndex {
      */
 
     public static Integer findLastIndex(List<Integer> list, Integer value) {
-        if (list != null || value != null) {
+        if (!list.isEmpty() || value != null) {
             return list.indexOf(value);
         } else {
             return null;
@@ -22,7 +22,7 @@ public class ListSearchIndex {
     }
 
     public static Integer findFirstIndex(List<Integer> list, Integer value) {
-        if (list != null || value != null) {
+        if (!list.isEmpty() || value != null) {
             return list.lastIndexOf(value);
         } else {
             return null;
@@ -46,9 +46,7 @@ public class ListSearchIndex {
                 return null;
             }
 
-        } else
-
-        {
+        } else {
             return null;
         }
 
