@@ -36,29 +36,33 @@ public class ListSearchIndex {
             return null;
         }
 
+        // Si list isNot empty :
         if (!list.isEmpty()) {
 
-            if (list.indexOf(value) != list.lastIndexOf(value)) {
-                list_perso.add(list.indexOf(value));
-                list_perso.add(list.lastIndexOf(value));
-                return list_perso;
+            // si la list contient la value :
+            if (list.contains(value)) {
 
-            } else if (list.indexOf(value) == list.lastIndexOf(value)) {
-                if (list.indexOf(value) >= 0) {
+                // Pour i = 0; tant que i inf à la taille de list; incr i++ :
+                for (int i = 0; i < list.size(); i++) {
 
-                    return new ArrayList<Integer>();
+                    // si la valeur de la list à cet index est eq à l'index de list pour i :
+                    if (list.get(i) == list.get(list.indexOf(value))) {
+
+                        // ajout de l'index dans le tableau :
+                        list_perso.add(i);
+                    }
 
                 }
-
                 return list_perso;
 
             } else {
-                return list_perso;
+                return new ArrayList<Integer>();
             }
 
         } else {
-            return list_perso;
+            return new ArrayList<Integer>();
         }
 
     }
+
 }

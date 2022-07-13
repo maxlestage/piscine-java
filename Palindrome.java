@@ -1,5 +1,7 @@
+
 public class Palindrome {
     public static Boolean isPalindrome(String s) {
+
         String reversed = "";
 
         if (s != null) {
