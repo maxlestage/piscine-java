@@ -193,14 +193,24 @@ public class ExerciseRunner {
                  */
 
                 // ParseDate
-                System.out.println(ParseDate.parseIsoFormat("2022-04-25T20:51:28.709039322"));
-                System.out.println(ParseDate.parseIsoFormat(""));
-                System.out.println(ParseDate.parseFullTextFormat("lundi 25 avril 2022"));
-                System.out.println(ParseDate.parseFullTextFormat(""));
-                System.out.println(ParseDate.parseFullTextFormat("vendredi 18 mai 2018"));
-                System.out.println(ParseDate.parseTimeFormat("09 heures du soir, 07 minutes et 23 secondes"));
-                System.out.println(ParseDate.parseTimeFormat("08 heures du soir, 07 minutes et 23 secondes"));
-                System.out.println(ParseDate.parseTimeFormat(""));
+                /*
+                 * System.out.println(ParseDate.parseIsoFormat("2022-04-25T20:51:28.709039322"))
+                 * ;
+                 * System.out.println(ParseDate.parseIsoFormat(""));
+                 * System.out.println(ParseDate.parseFullTextFormat("lundi 25 avril 2022"));
+                 * System.out.println(ParseDate.parseFullTextFormat(""));
+                 * System.out.println(ParseDate.parseFullTextFormat("vendredi 18 mai 2018"));
+                 * System.out.println(ParseDate.
+                 * parseTimeFormat("09 heures du soir, 07 minutes et 23 secondes"));
+                 * System.out.println(ParseDate.
+                 * parseTimeFormat("08 heures du soir, 07 minutes et 23 secondes"));
+                 * System.out.println(ParseDate.parseTimeFormat(""));
+                 */
+
+                // FormatDate
+                System.out.println(FormatDate.formatToFullText(LocalDateTime.of(2021, 8, 22, 13, 25, 46)));
+                System.out.println(FormatDate.formatSimple(LocalDate.of(2022, 2, 13)));
+                System.out.println(FormatDate.formatIso(LocalTime.of(16, 18, 56, 8495847)));
 
         }
 }
