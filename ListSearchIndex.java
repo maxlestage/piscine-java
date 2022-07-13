@@ -22,7 +22,6 @@ public class ListSearchIndex {
                     } else {
                         return null;
                     }
-
                 } else {
                     return null;
                 }
@@ -30,7 +29,6 @@ public class ListSearchIndex {
         } else {
             return null;
         }
-
     }
 
     public static Integer findFirstIndex(List<Integer> list, Integer value) {
@@ -41,11 +39,9 @@ public class ListSearchIndex {
                 } else {
                     return null;
                 }
-
             } else {
                 return null;
             }
-
         } else {
             return null;
         }
@@ -53,38 +49,26 @@ public class ListSearchIndex {
 
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
         List<Integer> list_perso = new ArrayList<Integer>();
-
         if (value == null) {
             return null;
         }
-
-        if (list != null) { // Si list isNot empty :
+        if (list != null) {
             if (!list.isEmpty()) {
-
-                // si la list contient la value :
                 if (list.contains(value)) {
 
-                    // Pour i = 0; tant que i inf à la taille de list; incr i++ :
                     for (int i = 0; i < list.size(); i++) {
-
-                        // si la valeur de la list à cet index est eq à l'index de list pour i :
                         if (list.get(i).equals(list.get(list.indexOf(value)))) {
 
-                            // ajout de l'index dans le tableau :
                             list_perso.add(i);
                         }
-
                     }
                     return list_perso;
-
                 } else {
                     return new ArrayList<Integer>();
                 }
-
             } else {
                 return new ArrayList<Integer>();
             }
-
         } else {
             return new ArrayList<Integer>();
         }
