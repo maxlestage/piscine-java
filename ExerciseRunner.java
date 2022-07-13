@@ -200,6 +200,7 @@ public class ExerciseRunner {
                 System.out.println(ParseDate.parseFullTextFormat("vendredi 18 mai 2018"));
                 System.out.println(ParseDate.parseTimeFormat("09 heures du soir, 07 minutes et 23 secondes"));
                 System.out.println(ParseDate.parseTimeFormat("08 heures du soir, 07 minutes et 23 secondes"));
+                System.out.println(ParseDate.parseTimeFormat(""));
 
         }
 }
