@@ -15,10 +15,16 @@ public class ListSearchIndex {
 
     public static Integer findLastIndex(List<Integer> list, Integer value) {
         if (!list.isEmpty() || value != null) {
-            return list.indexOf(value);
+            if (list.contains(value)) {
+                return list.indexOf(value);
+            } else {
+                return null;
+            }
+
         } else {
             return null;
         }
+
     }
 
     public static Integer findFirstIndex(List<Integer> list, Integer value) {
@@ -37,7 +43,7 @@ public class ListSearchIndex {
         }
 
         // Si list isNot empty :
-        if (!list.isEmpty()) {
+        if (!list.isEmpty() || list == null) {
 
             // si la list contient la value :
             if (list.contains(value)) {
