@@ -48,7 +48,7 @@ public class ListSearchIndex {
         }
 
         // Si list isNot empty :
-        if (!list.isEmpty() || list == null) {
+        if (!list.isEmpty() || list != null) {
 
             // si la list contient la value :
             if (list.contains(value)) {
