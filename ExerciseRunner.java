@@ -196,6 +196,8 @@ public class ExerciseRunner {
                 // System.out.println(ParseDate.parseIsoFormat("2022-04-25T20:51:28.709039322"));
                 // System.out.println(ParseDate.parseIsoFormat("lundi 25 avril 2022"));
                 System.out.println(ParseDate.parseFullTextFormat("lundi 25 avril 2022"));
+                System.out.println(ParseDate.parseFullTextFormat(""));
+                System.out.println(ParseDate.parseFullTextFormat("vendredi 18 mai 2018"));
                 // System.out.println(ParseDate.parseFullTextFormat("09 heures du soir, 07
                 // minutes et 23 secondes"));
                 System.out.println(ParseDate.parseTimeFormat("09 heures du soir, 07 minutes et 23 secondes"));
