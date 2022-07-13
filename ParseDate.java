@@ -11,7 +11,6 @@ public class ParseDate {
         if (stringDate != null) {
             if (stringDate != "") {
                 LocalDateTime dateTime = LocalDateTime.parse(stringDate);
-
                 return dateTime;
             } else {
                 return null;
@@ -27,7 +26,6 @@ public class ParseDate {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE dd MMMM yyyy", Locale.FRANCE);
                 String text = stringDate.formatted(formatter);
                 LocalDate parsedDate = LocalDate.parse(text, formatter);
-
                 return parsedDate;
             } else {
                 return null;
@@ -44,7 +42,6 @@ public class ParseDate {
                         "hh 'heures' B, mm 'minutes et' ss 'secondes'", Locale.FRANCE);
                 String text = stringDate.formatted(formatter);
                 LocalTime parsedDate = LocalTime.parse(text, formatter);
-
                 return parsedDate;
             } else {
                 return null;
