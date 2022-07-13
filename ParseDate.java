@@ -2,7 +2,6 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
@@ -25,7 +24,7 @@ public class ParseDate {
     public static LocalDate parseFullTextFormat(String stringDate) {
         if (stringDate != null) {
             if (stringDate != "") {
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE dd MMMM yyyy");
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE dd MMMM yyyy", Locale.FRANCE);
                 String text = stringDate.formatted(formatter);
                 LocalDate parsedDate = LocalDate.parse(text, formatter);
 
@@ -42,7 +41,7 @@ public class ParseDate {
         if (stringDate != null) {
             if (stringDate != "") {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
-                        "hh 'heures' B, mm 'minutes et' ss 'secondes'");
+                        "hh 'heures' B, mm 'minutes et' ss 'secondes'", Locale.FRANCE);
                 String text = stringDate.formatted(formatter);
                 LocalTime parsedDate = LocalTime.parse(text, formatter);
 
