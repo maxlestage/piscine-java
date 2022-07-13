@@ -29,7 +29,12 @@ public class ListSearchIndex {
 
     public static Integer findFirstIndex(List<Integer> list, Integer value) {
         if (!list.isEmpty() || value != null) {
-            return list.lastIndexOf(value);
+            if (list.contains(value)) {
+                return list.lastIndexOf(value);
+            } else {
+                return null;
+            }
+
         } else {
             return null;
         }
