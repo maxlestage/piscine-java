@@ -45,8 +45,11 @@ public class ListSearchIndex {
 
             } else if (list.indexOf(value) == list.lastIndexOf(value)) {
                 if (list.indexOf(value) >= 0) {
-                    list_perso.add(list.indexOf(value));
+
+                    return new ArrayList<Integer>();
+
                 }
+
                 return list_perso;
 
             } else {
