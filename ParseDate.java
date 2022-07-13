@@ -42,7 +42,7 @@ public class ParseDate {
         if (stringDate != null) {
             if (stringDate != "") {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
-                        "hh 'heures' B, mm 'minutes et' ss 'secondes'", Locale.FRANCE);
+                        "hh 'heures' B, mm 'minutes et' ss 'secondes'");
                 String text = stringDate.formatted(formatter);
                 LocalTime parsedDate = LocalTime.parse(text, formatter);
 
