@@ -3,12 +3,21 @@ import java.util.List;
 public class ListEqual {
     public static boolean areListEquals(List<String> list1, List<String> list2) {
 
+        if (list1 == null) {
+            return false;
+        }
+
+        if (list2 == null) {
+            return false;
+        }
+
         // Si pas null :
         if (list1 != null && list2 != null) {
-            // si meme size :
+            // si même size :
             if (list1.size() == list2.size()) {
-                // si m
+                // si index 0 différent de "" :
                 if (list1.get(0) != "" && list2.get(0) != "") {
+                    // si l
                     if (list1.equals(list2)) {
                         return true;
                     } else {
@@ -22,5 +31,6 @@ public class ListEqual {
         } else {
             return false;
         }
+
     }
 }
