@@ -16,7 +16,7 @@ public class ListSearchIndex {
     public static Integer findLastIndex(List<Integer> list, Integer value) {
         if (!list.isEmpty() || value != null) {
             if (list.contains(value)) {
-                return list.lastIndexOf(value);
+                return list.indexOf(value);
             } else {
                 return null;
             }
@@ -30,7 +30,7 @@ public class ListSearchIndex {
     public static Integer findFirstIndex(List<Integer> list, Integer value) {
         if (!list.isEmpty() || value != null) {
             if (list.contains(value)) {
-                return list.indexOf(value);
+                return list.lastIndexOf(value);
             } else {
                 return null;
             }
@@ -57,7 +57,7 @@ public class ListSearchIndex {
                 for (int i = 0; i < list.size(); i++) {
 
                     // si la valeur de la list à cet index est eq à l'index de list pour i :
-                    if (list.get(i) == list.get(list.indexOf(value))) {
+                    if (list.get(i).equals(list.get(list.indexOf(value)))) {
 
                         // ajout de l'index dans le tableau :
                         list_perso.add(i);
