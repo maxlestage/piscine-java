@@ -18,7 +18,7 @@ public class ListSearchIndex {
             {
                 if (!list.isEmpty()) {
                     if (list.contains(value)) {
-                        return list.indexOf(value);
+                        return list.lastIndexOf(value);
                     } else {
                         return null;
                     }
@@ -37,7 +37,7 @@ public class ListSearchIndex {
         if (list != null) {
             if (!list.isEmpty()) {
                 if (list.contains(value)) {
-                    return list.lastIndexOf(value);
+                    return list.indexOf(value);
                 } else {
                     return null;
                 }
