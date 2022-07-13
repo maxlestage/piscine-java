@@ -173,5 +173,9 @@ public class ExerciseRunner {
                                 List.of("Alice", "Bob", "Charly", "Emily")));
                 System.out.println(ListEqual.areListEquals(List.of("Alice", "Bob", "Charly", "Emily"),
                                 List.of("Alice", "Bob", "Emily", "Charly")));
+                System.out.println(ListEqual.areListEquals(List.of("Alice", "Bob", "Charly", "Emily"),
+                                List.of("Alice", "Bob", "Charly", "Emily")));
+                System.out.println(ListEqual.areListEquals(List.of("Bonjour", "Gracias", "Hello"),
+                                List.of("Bonjour", "Hello")));
         }
 }
