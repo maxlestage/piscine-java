@@ -105,57 +105,73 @@ public class ExerciseRunner {
                  */
 
                 // ListSearchIndex
-                System.out.println(ListSearchIndex.findLastIndex(List.of(9, 13, 89, 8, 89,
-                                23, 1, 0, 89), 89));
+                /*
+                 * System.out.println(ListSearchIndex.findLastIndex(List.of(9, 13, 89, 8, 89,
+                 * 23, 1, 0, 89), 89));
+                 * 
+                 * System.out.println(ListSearchIndex.findFirstIndex(List.of(9, 13, 89, 8, 23,
+                 * 1, 0, 89), 89));
+                 * 
+                 * System.out.println(ListSearchIndex.findAllIndexes(List.of(9, 13, 89, 89, 8,
+                 * 23,
+                 * 1, 0, 89), 89).toString());
+                 * 
+                 * System.out.println(
+                 * ListSearchIndex.findAllIndexes(List.of(43784, 327, 1903, 3847, 327, 327,
+                 * 3289), 43784)
+                 * .toString());
+                 * 
+                 * System.out.println(ListSearchIndex
+                 * .findAllIndexes(List.of(43784, 327, 43784, 1903, 3847, 43784, 327, 327,
+                 * 3289), 43784));
+                 * 
+                 * System.out.println(
+                 * ListSearchIndex.findAllIndexes(List.of(28, 4893, 438, 54857, 4374, 4893,
+                 * 48394), 4893));
+                 * 
+                 * System.out.println(ListSearchIndex.findAllIndexes(List.of(), 4893));
+                 * 
+                 * System.out.println(
+                 * ListSearchIndex.findAllIndexes(List.of(43784, 327, 1903, 3847, 327, 327,
+                 * 3289), 489));
+                 * 
+                 * System.out.println(
+                 * ListSearchIndex.findAllIndexes(List.of(43784, 327, 1903, 3847, 327, 327,
+                 * 3289), 489));
+                 * 
+                 * System.out.println(ListSearchIndex.findAllIndexes(List.of(43784, 327, 1903,
+                 * 3847, 327, 327,
+                 * 3289), 327).toString());
+                 * 
+                 * System.out.println(ListSearchIndex.findAllIndexes(List.of(
+                 * 327, 327, 1903,
+                 * 327, 3847,
+                 * 327, 327, 327,
+                 * 3289), 327));
+                 * 
+                 * System.out.println(ListSearchIndex.findAllIndexes(List.of(89, 13, 89, 89, 8,
+                 * 23,
+                 * 1, 0, 89), 89).toString());
+                 * 
+                 * System.out.println(ListSearchIndex.findAllIndexes(List.of(1000, 13, 89, 89,
+                 * 8, 23,
+                 * 1, 0, 89), 89).toString());
+                 * 
+                 * System.out.println(ListSearchIndex.findAllIndexes(List.of(
+                 * 100,
+                 * 100, 1000, 3847, 327, 327,
+                 * 3289), 100).toString());
+                 * 
+                 * System.out.println(ListSearchIndex.findLastIndex(List.of(9, 13, 89, 8, 23, 1,
+                 * 0, 89), 89));
+                 * System.out.println(ListSearchIndex.findFirstIndex(List.of(9, 13, 89, 8, 23,
+                 * 1, 0, 89), 89));
+                 */
 
-                System.out.println(ListSearchIndex.findFirstIndex(List.of(9, 13, 89, 8, 23,
-                                1, 0, 89), 89));
-
-                System.out.println(ListSearchIndex.findAllIndexes(List.of(9, 13, 89, 89, 8, 23,
-                                1, 0, 89), 89).toString());
-
-                System.out.println(
-                                ListSearchIndex.findAllIndexes(List.of(43784, 327, 1903, 3847, 327, 327,
-                                                3289), 43784)
-                                                .toString());
-
-                System.out.println(ListSearchIndex
-                                .findAllIndexes(List.of(43784, 327, 43784, 1903, 3847, 43784, 327, 327, 3289), 43784));
-
-                System.out.println(
-                                ListSearchIndex.findAllIndexes(List.of(28, 4893, 438, 54857, 4374, 4893, 48394), 4893));
-
-                System.out.println(ListSearchIndex.findAllIndexes(List.of(), 4893));
-
-                System.out.println(
-                                ListSearchIndex.findAllIndexes(List.of(43784, 327, 1903, 3847, 327, 327,
-                                                3289), 489));
-
-                System.out.println(
-                                ListSearchIndex.findAllIndexes(List.of(43784, 327, 1903, 3847, 327, 327,
-                                                3289), 489));
-
-                System.out.println(ListSearchIndex.findAllIndexes(List.of(43784, 327, 1903, 3847, 327, 327,
-                                3289), 327).toString());
-
-                System.out.println(ListSearchIndex.findAllIndexes(List.of(
-                                327, 327, 1903,
-                                327, 3847,
-                                327, 327, 327,
-                                3289), 327));
-
-                System.out.println(ListSearchIndex.findAllIndexes(List.of(89, 13, 89, 89, 8, 23,
-                                1, 0, 89), 89).toString());
-
-                System.out.println(ListSearchIndex.findAllIndexes(List.of(1000, 13, 89, 89, 8, 23,
-                                1, 0, 89), 89).toString());
-
-                System.out.println(ListSearchIndex.findAllIndexes(List.of(
-                                100,
-                                100, 1000, 3847, 327, 327,
-                                3289), 100).toString());
-
-                System.out.println(ListSearchIndex.findLastIndex(List.of(9, 13, 89, 8, 23, 1, 0, 89), 89));
-                System.out.println(ListSearchIndex.findFirstIndex(List.of(9, 13, 89, 8, 23, 1, 0, 89), 89));
+                // ListEqual
+                System.out.println(ListEqual.areListEquals(List.of("Alice", "Bob", "Charly", "Emily"),
+                                List.of("Alice", "Bob", "Charly", "Emily")));
+                System.out.println(ListEqual.areListEquals(List.of("Alice", "Bob", "Charly", "Emily"),
+                                List.of("Alice", "Bob", "Emily", "Charly")));
         }
 }
