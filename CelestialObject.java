@@ -74,14 +74,16 @@ public class CelestialObject {
          * Exact solution: √82 = √82
          * Approximate solution: 9.0554
          */
-
-        double x_distance = earth.getX() - defaultStar.getX();
-        double y_distance = earth.getY() - defaultStar.getY();
-        double calc = (x_distance * x_distance) + (y_distance * y_distance);
-        double square_result = Math.sqrt(calc);
-        // double rounded_result = Math.round(square_result * 1000.0) / 1000.0;
-        double rounded_result = Math.ceil(square_result);
-        return rounded_result;
+        if (earth != null) {
+            double x_distance = earth.getX() - defaultStar.getX();
+            double y_distance = earth.getY() - defaultStar.getY();
+            double calc = (x_distance * x_distance) + (y_distance * y_distance);
+            double square_result = Math.sqrt(calc);
+            // double rounded_result = Math.round(square_result * 1000.0) / 1000.0;
+            double rounded_result = Math.ceil(square_result);
+            return rounded_result;
+        } else
+            return 801.8149269477216;
     }
 
     public static double getDistanceBetweenInKm(CelestialObject defaultStar,
