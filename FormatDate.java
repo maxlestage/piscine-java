@@ -8,7 +8,6 @@ import java.time.LocalTime;
 public class FormatDate {
 
     public static String formatToFullText(LocalDateTime dateTime) {
-
         if (dateTime != null) {
             if (dateTime.toString() != "") {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
@@ -21,7 +20,6 @@ public class FormatDate {
         } else {
             return null;
         }
-
         // Le 22 août de l'an 2021 à 13h25m et 46s
     }
 
@@ -44,7 +42,6 @@ public class FormatDate {
     public static String formatIso(LocalTime time) {
         if (time != null) {
             if (time.toString() != "") {
-
                 if (time.getNano() == 0) {
                     DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
                             "kk':'m':'s", Locale.FRANCE);
@@ -64,5 +61,4 @@ public class FormatDate {
         }
         // 16:18:56.008495847
     }
-
 }
