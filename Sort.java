@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 public class Sort {
 
     public static List<Integer> sort(List<Integer> list) {
-        if (list.size() != 0) {
+        if (list != null) {
             List<Integer> sortedList = list.stream().sorted().collect(Collectors.toList());
             return sortedList;
         } else {
@@ -16,7 +16,7 @@ public class Sort {
 
     public static List<Integer> sortReverse(List<Integer> list) {
 
-        if (list.size() != 0) {
+        if (list != null) {
             List<Integer> sortedList = list.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
             return sortedList;
         } else {
