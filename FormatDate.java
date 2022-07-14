@@ -12,7 +12,7 @@ public class FormatDate {
         if (dateTime != null) {
             if (dateTime.toString() != "") {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
-                        "'Le' F LLL 'de l\''an' YYYY 'à' kk'h'mm'm' 'et' ss's'", Locale.FRANCE);
+                        "'Le' d LLL 'de l\''an' YYYY 'à' kk'h'mm'm' 'et' ss's'", Locale.FRANCE);
                 String text = dateTime.format(formatter);
                 return text;
             } else {
