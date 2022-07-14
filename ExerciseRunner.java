@@ -1,10 +1,11 @@
 
 // import java.util.List;
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Period;
+// import java.time.Duration;
+// import java.time.LocalDate;
+// import java.time.LocalDateTime;
+// import java.time.LocalTime;
+// import java.time.Period;
+import java.util.List;
 
 public class ExerciseRunner {
         public static void main(String[] args) {
@@ -225,24 +226,37 @@ public class ExerciseRunner {
                  */
 
                 // Duration
-                Duration duration = DifferenceBetweenDate.durationBetweenTime(LocalTime.of(12, 54, 32),
-                                LocalTime.of(21, 23, 53));
-                System.out.println(duration.toHoursPart() + "H" + duration.toMinutesPart() +
-                                "M"
-                                + duration.toSecondsPart() + "S");
-                Duration duration1 = DifferenceBetweenDate.durationBetweenTime(LocalTime.of(19, 47, 43),
-                                LocalTime.of(12, 25, 57));
-                System.out.println(duration1.toHoursPart() + "H" + duration1.toMinutesPart() +
-                                "M"
-                                + duration1.toSecondsPart() + "S");
-                Period period = DifferenceBetweenDate.periodBetweenDate(LocalDate.of(2020, 10, 13),
-                                LocalDate.of(2022, 5, 8));
-                System.out.println(period.getYears() + "Y" + period.getMonths() + "M" + period.getDays() + "D");
-                System.out.println(DifferenceBetweenDate.numberOfHoursBetweenDateTime(
-                                LocalDateTime.of(2022, 4, 12, 16, 18, 56), LocalDateTime.of(2022, 5, 10, 21,
-                                                54, 56)));
-                System.out.println(DifferenceBetweenDate.numberOfHoursBetweenDateTime(
-                                LocalDateTime.of(2021, 4, 12, 16, 18, 56), LocalDateTime.of(2022, 5, 10, 21,
-                                                54, 56)));
+                /*
+                 * Duration duration =
+                 * DifferenceBetweenDate.durationBetweenTime(LocalTime.of(12, 54, 32),
+                 * LocalTime.of(21, 23, 53));
+                 * System.out.println(duration.toHoursPart() + "H" + duration.toMinutesPart() +
+                 * "M"
+                 * + duration.toSecondsPart() + "S");
+                 * Duration duration1 =
+                 * DifferenceBetweenDate.durationBetweenTime(LocalTime.of(19, 47, 43),
+                 * LocalTime.of(12, 25, 57));
+                 * System.out.println(duration1.toHoursPart() + "H" + duration1.toMinutesPart()
+                 * +
+                 * "M"
+                 * + duration1.toSecondsPart() + "S");
+                 * Period period = DifferenceBetweenDate.periodBetweenDate(LocalDate.of(2020,
+                 * 10, 13),
+                 * LocalDate.of(2022, 5, 8));
+                 * System.out.println(period.getYears() + "Y" + period.getMonths() + "M" +
+                 * period.getDays() + "D");
+                 * System.out.println(DifferenceBetweenDate.numberOfHoursBetweenDateTime(
+                 * LocalDateTime.of(2022, 4, 12, 16, 18, 56), LocalDateTime.of(2022, 5, 10, 21,
+                 * 54, 56)));
+                 * System.out.println(DifferenceBetweenDate.numberOfHoursBetweenDateTime(
+                 * LocalDateTime.of(2021, 4, 12, 16, 18, 56), LocalDateTime.of(2022, 5, 10, 21,
+                 * 54, 56)));
+                 */
+
+                // Sort
+                System.out.println(Sort.sort(List.of(15, 1, 14, 18, 14, 98, 54, -1, 12)).toString());
+                // System.out.println(Sort.sortReverse(List.of(15, 1, 14, 18, 14, 98, 54, -1,
+                // 12)).toString());
         }
+
 }
