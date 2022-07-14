@@ -230,6 +230,11 @@ public class ExerciseRunner {
                 System.out.println(duration.toHoursPart() + "H" + duration.toMinutesPart() +
                                 "M"
                                 + duration.toSecondsPart() + "S");
+                Duration duration1 = DifferenceBetweenDate.durationBetweenTime(LocalTime.of(19, 47, 43),
+                                LocalTime.of(12, 25, 57));
+                System.out.println(duration1.toHoursPart() + "H" + duration1.toMinutesPart() +
+                                "M"
+                                + duration1.toSecondsPart() + "S");
                 Period period = DifferenceBetweenDate.periodBetweenDate(LocalDate.of(2020, 10, 13),
                                 LocalDate.of(2022, 5, 8));
                 System.out.println(period.getYears() + "Y" + period.getMonths() + "M" + period.getDays() + "D");

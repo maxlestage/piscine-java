@@ -18,7 +18,7 @@ public class DifferenceBetweenDate {
                         || localTime2.getMinute() != 0 || localTime2.getSecond() != 0) {
 
                     if (localTime1.isAfter(localTime2)) {
-                        Duration duration = Duration.between(localTime2, localTime2);
+                        Duration duration = Duration.between(localTime2, localTime1);
                         return duration;
                     } else {
                         Duration duration = Duration.between(localTime1, localTime2);
