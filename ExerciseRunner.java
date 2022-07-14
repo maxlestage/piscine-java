@@ -212,11 +212,30 @@ public class ExerciseRunner {
                  */
 
                 // FormatDate
-                System.out.println(FormatDate.formatToFullText(LocalDateTime.of(2021, 8, 22, 13, 25, 46)));
-                System.out.println(FormatDate.formatToFullText(LocalDateTime.of(2021, 10, 22, 13, 25, 46)));
-                System.out.println(FormatDate.formatSimple(LocalDate.of(2022, 2, 13)));
-                System.out.println(FormatDate.formatIso(LocalTime.of(16, 18, 56, 8495847)));
-                System.out.println(FormatDate.formatIso(LocalTime.of(16, 18, 56)));
+                /*
+                 * System.out.println(FormatDate.formatToFullText(LocalDateTime.of(2021, 8, 22,
+                 * 13, 25, 46)));
+                 * System.out.println(FormatDate.formatToFullText(LocalDateTime.of(2021, 10, 22,
+                 * 13, 25, 46)));
+                 * System.out.println(FormatDate.formatSimple(LocalDate.of(2022, 2, 13)));
+                 * System.out.println(FormatDate.formatIso(LocalTime.of(16, 18, 56, 8495847)));
+                 * System.out.println(FormatDate.formatIso(LocalTime.of(16, 18, 56)));
+                 */
+
+                // Duration
+                Duration duration = DifferenceBetweenDate.durationBetweenTime(LocalTime.of(12, 54, 32),
+                                LocalTime.of(21, 23, 53));
+                // System.out.println(duration.toHoursPart() + "H" + duration.toMinutesPart() +
+                // "M"
+                // + duration.toSecondsPart() + "S");
+                // Period period = DifferenceBetweenDate.periodBetweenDate(LocalDate.of(2020,
+                // 10, 13),
+                // LocalDate.of(2022, 5, 8));
+                // System.out.println(period.getYears() + "Y" + period.getMonths() + "M" +
+                // period.getDays() + "D");
+                // System.out.println(DifferenceBetweenDate.numberOfHoursBetweenDateTime(
+                // LocalDateTime.of(2022, 4, 12, 16, 18, 56), LocalDateTime.of(2022, 5, 10, 21,
+                // 54, 56)));
 
         }
 }
