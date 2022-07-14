@@ -80,7 +80,12 @@ public class CelestialObject {
 
         return Math.ceil(
                 Math.sqrt(((defaultStar.getX() - earth.getX()) * (defaultStar.getX() - earth.getX())) + ((defaultStar
-                        .getY() - earth.getY()) * (defaultStar.getZ() - earth.getZ()))));
+                        .getY() - earth.getY()) * (defaultStar.getY() - earth.getY()))
+                        + (((defaultStar
+                                .getZ()
+                                * defaultStar
+                                        .getZ())
+                                - earth.getZ()))));
     }
 
     public static double getDistanceBetweenInKm(CelestialObject defaultStar,
