@@ -54,7 +54,6 @@ public class CelestialObject {
     }
 
     public static double getDistanceBetween(CelestialObject defaultStar, CelestialObject earth) {
-
         /*
          * d = √((x2-x1)2 + (y2-y1)2)
          * 
@@ -69,32 +68,31 @@ public class CelestialObject {
          * Exact solution: √82 = √82
          * Approximate solution: 9.0554
          */
-        if (earth.getX() > 0 && earth.getY() > 0) {
-            double x_distance = earth.getX() - defaultStar.getX();
-            double y_distance = earth.getY() - defaultStar.getY();
-            double calc = (x_distance * x_distance) + (y_distance * y_distance);
-            double square_result = Math.sqrt(calc);
-            // double rounded_result = Math.round(square_result * 1000.0) / 1000.0;
-            double rounded_result = Math.ceil(square_result);
-            return rounded_result;
-        } else {
-            return 801.8149_269_477_216;
-        }
+
+        // √(x1 -x2)² + (y1 - y2)² + (²z1 - z2)
+        // double x_distance = earth.getX() - defaultStar.getX();
+        // double y_distance = earth.getY() - defaultStar.getY();
+        // double calc = (x_distance * x_distance) + (y_distance * y_distance);
+        // double square_result = Math.sqrt(calc);
+        // // double rounded_result = Math.round(square_result * 1000.0) / 1000.0;
+        // double rounded_result = Math.ceil(square_result);
+        // return rounded_result;
+
+        return Math.ceil(
+                Math.sqrt(((defaultStar.getX() - earth.getX()) * (defaultStar.getX() - earth.getX())) + ((defaultStar
+                        .getY() - earth.getY()) * (defaultStar.getZ() - earth.getZ()))));
     }
 
     public static double getDistanceBetweenInKm(CelestialObject defaultStar,
             CelestialObject earth) {
-        if (earth.getX() > 0 && earth.getY() > 0) {
-            double x_distance = earth.getX() - defaultStar.getX();
-            double y_distance = earth.getY() - defaultStar.getY();
-            double calc = (x_distance * x_distance) + (y_distance * y_distance);
-            double square_result = Math.sqrt(calc);
-            // double rounded_result = Math.round(square_result * 1000.0) / 1000.0;
-            double rounded_result = Math.ceil(square_result) * KM_IN_ONE_AU;
-            return rounded_result;
-        } else {
-            return 801.8149_269_477_216;
-        }
+        double x_distance = earth.getX() - defaultStar.getX();
+        double y_distance = earth.getY() - defaultStar.getY();
+        double calc = (x_distance * x_distance) + (y_distance * y_distance);
+        double square_result = Math.sqrt(calc);
+        // double rounded_result = Math.round(square_result * 1000.0) / 1000.0;
+        double rounded_result = Math.ceil(square_result) * KM_IN_ONE_AU;
+        return rounded_result;
+
     }
 
 }
