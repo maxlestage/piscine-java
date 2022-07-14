@@ -34,8 +34,15 @@ public class DifferenceBetweenDate {
 
         if (date1 != null && date2 != null) {
             if (date1.toString() != "" && date2.toString() != "") {
-                Period period = Period.between(date1, date2);
-                return period;
+
+                if (date1.isAfter(date2)) {
+                    Period period = Period.between(date2, date1);
+                    return period;
+                } else {
+                    Period period = Period.between(date1, date2);
+                    return period;
+                }
+
             } else {
                 return null;
             }
