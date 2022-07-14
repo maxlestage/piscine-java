@@ -1,14 +1,12 @@
-
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Sort {
 
     public static List<Integer> sort(List<Integer> list) {
-        // your code here
-        // List<Integer> list_perso = new ArrayList<Integer>();
-
+        List<Integer> sortedList = list.stream().sorted().collect(Collectors.toList());
+        return sortedList;
         // [-1, 1, 12, 14, 14, 15, 18, 54, 98]
-        return list;
     }
 
     // public static List<Integer> sortReverse(List<Integer> list) {
