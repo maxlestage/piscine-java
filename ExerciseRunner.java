@@ -5,8 +5,8 @@
 // import java.time.LocalDateTime;
 // import java.time.LocalTime;
 // import java.time.Period;
-import java.util.List;
-import java.util.Set;
+// import java.util.List;
+// import java.util.Set;
 
 public class ExerciseRunner {
         public static void main(String[] args) {
@@ -287,20 +287,30 @@ public class ExerciseRunner {
                  * System.out.println(earth.name);
                  */
 
-                CelestialObject defaultStar = new CelestialObject();
-                System.out.println(defaultStar.getX());
-                System.out.println(defaultStar.getY());
-                System.out.println(defaultStar.getZ());
-                System.out.println(defaultStar.getName());
+                /*
+                 * CelestialObject defaultStar = new CelestialObject();
+                 * System.out.println(defaultStar.getX());
+                 * System.out.println(defaultStar.getY());
+                 * System.out.println(defaultStar.getZ());
+                 * System.out.println(defaultStar.getName());
+                 * 
+                 * defaultStar.setName("Terre");
+                 * defaultStar.setX(0.43);
+                 * defaultStar.setY(0.98);
+                 * defaultStar.setZ(1.43);
+                 * System.out.println(defaultStar.getX());
+                 * System.out.println(defaultStar.getY());
+                 * System.out.println(defaultStar.getZ());
+                 * System.out.println(defaultStar.getName());
+                 */
 
-                defaultStar.setName("Terre");
-                defaultStar.setX(0.43);
-                defaultStar.setY(0.98);
-                defaultStar.setZ(1.43);
-                System.out.println(defaultStar.getX());
-                System.out.println(defaultStar.getY());
-                System.out.println(defaultStar.getZ());
-                System.out.println(defaultStar.getName());
+                CelestialObject defaultStar = new CelestialObject();
+                CelestialObject earth = new CelestialObject("Terre", 1.0, 2.0, 2.0);
+                // CelestialObject earth = new CelestialObject("Terre", 10.0, 3.0, 0.0);
+                System.out.println(CelestialObject.getDistanceBetween(defaultStar, earth));
+                System.out.println(CelestialObject.getDistanceBetweenInKm(defaultStar,
+                                earth));
+                System.out.println(CelestialObject.KM_IN_ONE_AU);
         }
 
 }
