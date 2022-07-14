@@ -12,7 +12,7 @@ public class FormatDate {
         if (dateTime != null) {
             if (dateTime.toString() != "") {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
-                        "'Le' F LLLL 'de l\''an' YYYY 'à' hh'h'mm 'et' ss's'", Locale.FRANCE);
+                        "'Le' F LLL 'de l\''an' YYYY 'à' kk'h'mm 'et' ss's'", Locale.FRANCE);
                 String text = dateTime.format(formatter);
                 return text;
             } else {
@@ -29,7 +29,7 @@ public class FormatDate {
         if (date != null) {
             if (date.toString() != "") {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
-                        "LLLL  dd YY", Locale.ITALIAN);
+                        "LLLL dd YY", Locale.ITALIAN);
                 String text = date.format(formatter);
                 return text;
             } else {
