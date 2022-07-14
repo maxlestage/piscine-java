@@ -16,8 +16,15 @@ public class DifferenceBetweenDate {
                         || localTime1.getSecond() != 0 && localTime2
                                 .getHour() != 0
                         || localTime2.getMinute() != 0 || localTime2.getSecond() != 0) {
-                    Duration duration = Duration.between(localTime1, localTime2);
-                    return duration;
+
+                    if (localTime1.isAfter(localTime2)) {
+                        Duration duration = Duration.between(localTime2, localTime2);
+                        return duration;
+                    } else {
+                        Duration duration = Duration.between(localTime1, localTime2);
+                        return duration;
+                    }
+
                 } else {
                     return null;
                 }
