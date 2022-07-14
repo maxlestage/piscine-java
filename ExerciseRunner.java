@@ -266,11 +266,24 @@ public class ExerciseRunner {
                 // System.out.println(KeepTheChange.computeChange(18, Set.of(1, 3, 7)));
 
                 // celestialObject
-                CelestialObject celestialObject = new CelestialObject();
-                System.out.println(celestialObject.x);
-                System.out.println(celestialObject.y);
-                System.out.println(celestialObject.z);
-                System.out.println(celestialObject.name);
+                /*
+                 * CelestialObject celestialObject = new CelestialObject();
+                 * System.out.println(celestialObject.x);
+                 * System.out.println(celestialObject.y);
+                 * System.out.println(celestialObject.z);
+                 * System.out.println(celestialObject.name);
+                 */
+                CelestialObject defaultStar = new CelestialObject();
+                System.out.println(defaultStar.x);
+                System.out.println(defaultStar.y);
+                System.out.println(defaultStar.z);
+                System.out.println(defaultStar.name);
+
+                CelestialObject earth = new CelestialObject("Terre", 0.43, 0.98, 1.43);
+                System.out.println(earth.x);
+                System.out.println(earth.y);
+                System.out.println(earth.z);
+                System.out.println(earth.name);
         }
 
 }
