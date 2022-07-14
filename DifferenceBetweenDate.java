@@ -16,7 +16,6 @@ public class DifferenceBetweenDate {
                         || localTime1.getSecond() != 0 && localTime2
                                 .getHour() != 0
                         || localTime2.getMinute() != 0 || localTime2.getSecond() != 0) {
-
                     if (localTime1.isAfter(localTime2)) {
                         Duration duration = Duration.between(localTime2, localTime1);
                         return duration;
@@ -24,7 +23,6 @@ public class DifferenceBetweenDate {
                         Duration duration = Duration.between(localTime1, localTime2);
                         return duration;
                     }
-
                 } else {
                     return null;
                 }
@@ -38,10 +36,8 @@ public class DifferenceBetweenDate {
     }
 
     public static Period periodBetweenDate(LocalDate date1, LocalDate date2) {
-
         if (date1 != null && date2 != null) {
             if (date1.toString() != "" && date2.toString() != "") {
-
                 if (date1.isAfter(date2)) {
                     Period period = Period.between(date2, date1);
                     return period;
@@ -49,7 +45,6 @@ public class DifferenceBetweenDate {
                     Period period = Period.between(date1, date2);
                     return period;
                 }
-
             } else {
                 return null;
             }
