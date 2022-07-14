@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 import java.time.Period;
+import java.time.temporal.ChronoUnit;
 
 public class DifferenceBetweenDate {
 
@@ -44,19 +45,18 @@ public class DifferenceBetweenDate {
         // 1Y6M25D
     }
 
-    // public static Long numberOfHoursBetweenDateTime(LocalDateTime dateTime1,
-    // LocalDateTime dateTime2) {
-    // if (dateTime1 != null && dateTime2 != null) {
-    // if (dateTime1.toString() != "" && dateTime2.toString() != "") {
-    // Long period = Long.between(dateTime1.getHour(), dateTime2.getHour());
-    // return period;
-    // } else {
-    // return null;
-    // }
-    // } else {
-    // return null;
-    // }
-    // // 677
-    // }
+    public static Long numberOfHoursBetweenDateTime(LocalDateTime dateTime1,
+            LocalDateTime dateTime2) {
+        if (dateTime1 != null && dateTime2 != null) {
+            if (dateTime1.toString() != "" && dateTime2.toString() != "") {
+                return ChronoUnit.HOURS.between(dateTime1, dateTime2);
+            } else {
+                return null;
+            }
+        } else {
+            return null;
+        }
+        // 677
+    }
 
 }
