@@ -1,27 +1,43 @@
 import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+// import java.time.LocalDate;
+// import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.Period;
+// import java.time.Period;
 
 public class DifferenceBetweenDate {
 
     public static Duration durationBetweenTime(LocalTime localTime1, LocalTime localTime2) {
         // your code here
-
+        if (localTime1 != null && localTime2 != null) {
+            if (localTime1.toString() != "" && localTime2.toString() != "") {
+                if (localTime1.getHour() != 0 || localTime1.getMinute() != 0
+                        || localTime1.getSecond() != 0 && localTime2
+                                .getHour() != 0
+                        || localTime2.getMinute() != 0 || localTime2.getSecond() != 0) {
+                    Duration duration = Duration.between(localTime1, localTime2);
+                    return duration;
+                } else {
+                    return null;
+                }
+            } else {
+                return null;
+            }
+        } else {
+            return null;
+        }
         // 8H29M21S
     }
+    // public static Period periodBetweenDate(LocalDate date1, LocalDate date2) {
+    // // your code here
 
-    public static Period periodBetweenDate(LocalDate date1, LocalDate date2) {
-        // your code here
+    // // 1Y6M25D
+    // }
 
-        // 1Y6M25D
-    }
+    // public static Long numberOfHoursBetweenDateTime(LocalDateTime dateTime1,
+    // LocalDateTime dateTime2) {
+    // // your code here
 
-    public static Long numberOfHoursBetweenDateTime(LocalDateTime dateTime1, LocalDateTime dateTime2) {
-        // your code here
-
-        // 677
-    }
+    // // 677
+    // }
 
 }

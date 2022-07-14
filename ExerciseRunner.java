@@ -1,5 +1,6 @@
 
 // import java.util.List;
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -225,9 +226,9 @@ public class ExerciseRunner {
                 // Duration
                 Duration duration = DifferenceBetweenDate.durationBetweenTime(LocalTime.of(12, 54, 32),
                                 LocalTime.of(21, 23, 53));
-                // System.out.println(duration.toHoursPart() + "H" + duration.toMinutesPart() +
-                // "M"
-                // + duration.toSecondsPart() + "S");
+                System.out.println(duration.toHoursPart() + "H" + duration.toMinutesPart() +
+                                "M"
+                                + duration.toSecondsPart() + "S");
                 // Period period = DifferenceBetweenDate.periodBetweenDate(LocalDate.of(2020,
                 // 10, 13),
                 // LocalDate.of(2022, 5, 8));
