@@ -44,10 +44,18 @@ public class FormatDate {
     public static String formatIso(LocalTime time) {
         if (time != null) {
             if (time.toString() != "") {
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
-                        "kk':'m':'s'.'n", Locale.FRANCE);
-                String text = time.format(formatter);
-                return text;
+
+                if (time.getNano() == 0) {
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
+                            "kk':'m':'s", Locale.FRANCE);
+                    String text = time.format(formatter);
+                    return text;
+                } else {
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
+                            "kk':'m':'s'.'n", Locale.FRANCE);
+                    String text = time.format(formatter);
+                    return text;
+                }
             } else {
                 return null;
             }
