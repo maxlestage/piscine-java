@@ -6,6 +6,7 @@
 // import java.time.LocalTime;
 // import java.time.Period;
 import java.util.List;
+import java.util.Set;
 
 public class ExerciseRunner {
         public static void main(String[] args) {
@@ -254,8 +255,22 @@ public class ExerciseRunner {
                  */
 
                 // Sort
-                System.out.println(Sort.sort(List.of(15, 1, 14, 18, 14, 98, 54, -1, 12)).toString());
-                System.out.println(Sort.sortReverse(List.of(15, 1, 14, 18, 14, 98, 54, -1, 12)).toString());
+                /*
+                 * System.out.println(Sort.sort(List.of(15, 1, 14, 18, 14, 98, 54, -1,
+                 * 12)).toString());
+                 * System.out.println(Sort.sortReverse(List.of(15, 1, 14, 18, 14, 98, 54, -1,
+                 * 12)).toString());
+                 */
+
+                // KeepTheChange
+                // System.out.println(KeepTheChange.computeChange(18, Set.of(1, 3, 7)));
+
+                // celestialObject
+                CelestialObject celestialObject = new CelestialObject();
+                System.out.println(celestialObject.x);
+                System.out.println(celestialObject.y);
+                System.out.println(celestialObject.z);
+                System.out.println(celestialObject.name);
         }
 
 }
