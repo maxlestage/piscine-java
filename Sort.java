@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -9,8 +10,9 @@ public class Sort {
         // [-1, 1, 12, 14, 14, 15, 18, 54, 98]
     }
 
-    // public static List<Integer> sortReverse(List<Integer> list) {
-    // // your code here
-    // [98,54,18,15,14,14,12,1,-1]
-    // }
+    public static List<Integer> sortReverse(List<Integer> list) {
+        List<Integer> sortedList = list.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+        return sortedList;
+        // [98,54,18,15,14,14,12,1,-1]
+    }
 }
