@@ -1,19 +1,60 @@
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Locale;
+import java.time.format.DateTimeFormatter;
 import java.time.LocalTime;
 
 public class FormatDate {
 
     public static String formatToFullText(LocalDateTime dateTime) {
-        // your code here
+
+        if (dateTime != null) {
+            if (dateTime.toString() != "") {
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
+                        "'Le' F LLLL 'de l\''an' YYYY 'à' hh'h'mm 'et' ss's'", Locale.FRANCE);
+                String text = dateTime.format(formatter);
+                return text;
+            } else {
+                return null;
+            }
+        } else {
+            return null;
+        }
+
+        // Le 22 août de l'an 2021 à 13h25m et 46s
     }
 
     public static String formatSimple(LocalDate date) {
-        // your code here
+        if (date != null) {
+            if (date.toString() != "") {
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
+                        "LLLL  dd YY", Locale.ITALIAN);
+                String text = date.format(formatter);
+                return text;
+            } else {
+                return null;
+            }
+        } else {
+            return null;
+        }
+        // febbraio 13 22
     }
 
     public static String formatIso(LocalTime time) {
-        // your code here
+        if (time != null) {
+            if (time.toString() != "") {
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
+                        "kk':'m':'s'.'n", Locale.FRANCE);
+                String text = time.format(formatter);
+                return text;
+            } else {
+                return null;
+            }
+        } else {
+            return null;
+        }
+        // 16:18:56.008495847
     }
 
 }
