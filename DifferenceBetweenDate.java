@@ -49,7 +49,12 @@ public class DifferenceBetweenDate {
             LocalDateTime dateTime2) {
         if (dateTime1 != null && dateTime2 != null) {
             if (dateTime1.toString() != "" && dateTime2.toString() != "") {
-                return ChronoUnit.HOURS.between(dateTime1, dateTime2);
+                Long unit = ChronoUnit.HOURS.between(dateTime1, dateTime2);
+                if (unit <= 0) {
+                    return ChronoUnit.HOURS.between(dateTime2, dateTime1);
+                } else {
+                    return ChronoUnit.HOURS.between(dateTime1, dateTime2);
+                }
             } else {
                 return null;
             }

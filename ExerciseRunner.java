@@ -236,6 +236,8 @@ public class ExerciseRunner {
                 System.out.println(DifferenceBetweenDate.numberOfHoursBetweenDateTime(
                                 LocalDateTime.of(2022, 4, 12, 16, 18, 56), LocalDateTime.of(2022, 5, 10, 21,
                                                 54, 56)));
-
+                System.out.println(DifferenceBetweenDate.numberOfHoursBetweenDateTime(
+                                LocalDateTime.of(2021, 4, 12, 16, 18, 56), LocalDateTime.of(2022, 5, 10, 21,
+                                                54, 56)));
         }
 }
