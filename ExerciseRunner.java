@@ -306,11 +306,16 @@ public class ExerciseRunner {
 
                 CelestialObject defaultStar = new CelestialObject();
                 CelestialObject earth = new CelestialObject("Terre", 1.0, 2.0, 2.0);
-                // CelestialObject earth = new CelestialObject();
-                // CelestialObject earth = new CelestialObject("Terre", 10.0, 3.0, 0.0);
+                CelestialObject earth2 = new CelestialObject();
                 System.out.println(CelestialObject.getDistanceBetween(defaultStar, earth));
-                System.out.println(CelestialObject.getDistanceBetweenInKm(defaultStar,
-                                earth));
+                System.out.println();
+                System.out.println("Test getDistanceBetween : earth2 = () ");
+                System.out.println(CelestialObject.getDistanceBetween(defaultStar, earth2));
+                System.out.println();
+                System.out.println(CelestialObject.getDistanceBetweenInKm(defaultStar, earth));
+                System.out.println();
+                System.out.println("Test getDistanceBetweenInKm : earth2 = () ");
+                System.out.println(CelestialObject.getDistanceBetweenInKm(defaultStar, earth2));
                 System.out.println(CelestialObject.KM_IN_ONE_AU);
         }
 
