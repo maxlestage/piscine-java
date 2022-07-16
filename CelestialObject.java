@@ -96,7 +96,10 @@ public class CelestialObject {
         double rounded_result = Math.ceil(square_result) * KM_IN_ONE_AU;
         // double rounded_result = square_result;
         System.out.println("getDistanceBetweenInKm");
+        System.out.println("square_result * KM_IN_ONE_AU");
         System.out.println(square_result * KM_IN_ONE_AU);
+        System.out.println("rounded_result");
+        System.out.println(rounded_result);
         return rounded_result;
 
     }
