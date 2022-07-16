@@ -79,12 +79,47 @@ public class CelestialObject {
 
     }
 
+    public double getDistanceWith(CelestialObject defaultStar) {
+
+        double x_distance = this.getX() - defaultStar.getX();
+        double y_distance = this.getY() - defaultStar.getY();
+        double z_distance = this.getZ() - defaultStar.getZ();
+        double calc = (x_distance * x_distance) + (y_distance * y_distance) + (z_distance * z_distance);
+        double square_result = Math.sqrt(calc);
+        // double rounded_result = Math.round(square_result * 1000.0) / 1000.0;
+        // double rounded_result = Math.ceil(square_result);
+        double rounded_result = square_result;
+
+        // System.out.println("getDistanceBetween");
+        // System.out.println("earth");
+        // System.out.println(earth.getX() + " ; " + earth.getY() + " ; " +
+        // earth.getZ());
+        // System.out.println();
+        // System.out.println("defaultStar");
+        // System.out.println(defaultStar.getX() + " ; " + defaultStar.getY() + " ; " +
+        // defaultStar.getZ());
+        // System.out.println();
+        // System.out.println(rounded_result);
+
+        return rounded_result;
+
+    }
+
     public static double getDistanceBetweenInKm(CelestialObject defaultStar,
             CelestialObject earth) {
 
         double result = getDistanceBetween(defaultStar, earth) * KM_IN_ONE_AU;
-        System.out.println("getDistanceBetweenInKm");
-        System.out.println(result);
+        // System.out.println("getDistanceBetweenInKm");
+        // System.out.println(result);
+        return result;
+
+    }
+
+    public double getDistanceWithInKm(CelestialObject defaultStar) {
+
+        double result = this.getDistanceWith(defaultStar) * KM_IN_ONE_AU;
+        // System.out.println("getDistanceBetweenInKm");
+        // System.out.println(result);
         return result;
 
     }
