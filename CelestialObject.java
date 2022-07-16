@@ -62,7 +62,16 @@ public class CelestialObject {
         double square_result = Math.sqrt(calc);
         // double rounded_result = Math.round(square_result * 1000.0) / 1000.0;
         double rounded_result = Math.ceil(square_result);
-        System.out.println("---------");
+
+        System.out.println("getDistanceBetween");
+        System.out.println("earth");
+        System.out.println(earth.getX() + " ; " + earth.getY() + " ; " + earth.getZ());
+        System.out.println();
+        System.out.println("defaultStar");
+        System.out.println(defaultStar.getX() + " ; " + defaultStar.getY() + " ; " + defaultStar.getZ());
+        System.out.println();
+        System.out.println(rounded_result);
+
         return rounded_result;
 
     }
@@ -70,7 +79,10 @@ public class CelestialObject {
     public static double getDistanceBetweenInKm(CelestialObject defaultStar,
             CelestialObject earth) {
 
-        return getDistanceBetween(defaultStar, earth) * KM_IN_ONE_AU;
+        double result = getDistanceBetween(defaultStar, earth) * KM_IN_ONE_AU;
+        System.out.println("getDistanceBetweenInKm");
+        System.out.println(result);
+        return result;
         // double x_distance = earth.getX() - defaultStar.getX();
         // double y_distance = earth.getY() - defaultStar.getY();
         // double z_distance = earth.getZ() - defaultStar.getZ();
