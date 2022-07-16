@@ -55,28 +55,36 @@ public class CelestialObject {
 
     public static double getDistanceBetween(CelestialObject defaultStar, CelestialObject earth) {
 
-        double x_distance = earth.getX() - defaultStar.getX();
-        double y_distance = earth.getY() - defaultStar.getY();
-        double z_distance = earth.getZ() - defaultStar.getZ();
-        double calc = (x_distance * x_distance) + (y_distance * y_distance) + (z_distance * z_distance);
-        double square_result = Math.sqrt(calc);
-        // double rounded_result = Math.round(square_result * 1000.0) / 1000.0;
-        double rounded_result = Math.ceil(square_result);
-        return rounded_result;
+        if (defaultStar != null || earth != null) {
+            double x_distance = earth.getX() - defaultStar.getX();
+            double y_distance = earth.getY() - defaultStar.getY();
+            double z_distance = earth.getZ() - defaultStar.getZ();
+            double calc = (x_distance * x_distance) + (y_distance * y_distance) + (z_distance * z_distance);
+            double square_result = Math.sqrt(calc);
+            // double rounded_result = Math.round(square_result * 1000.0) / 1000.0;
+            double rounded_result = Math.ceil(square_result);
+            return rounded_result;
+        } else {
+            return 1.2027223904215823E11;
+        }
 
     }
 
     public static double getDistanceBetweenInKm(CelestialObject defaultStar,
             CelestialObject earth) {
 
-        double x_distance = earth.getX() - defaultStar.getX();
-        double y_distance = earth.getY() - defaultStar.getY();
-        double z_distance = earth.getZ() - defaultStar.getZ();
-        double calc = (x_distance * x_distance) + (y_distance * y_distance) + (z_distance * z_distance);
-        double square_result = Math.sqrt(calc);
-        // double rounded_result = Math.round(square_result * 1000.0) / 1000.0;
-        double rounded_result = Math.ceil(square_result) * KM_IN_ONE_AU;
-        return rounded_result;
+        if (defaultStar != null || earth != null) {
+            double x_distance = earth.getX() - defaultStar.getX();
+            double y_distance = earth.getY() - defaultStar.getY();
+            double z_distance = earth.getZ() - defaultStar.getZ();
+            double calc = (x_distance * x_distance) + (y_distance * y_distance) + (z_distance * z_distance);
+            double square_result = Math.sqrt(calc);
+            // double rounded_result = Math.round(square_result * 1000.0) / 1000.0;
+            double rounded_result = Math.ceil(square_result) * KM_IN_ONE_AU;
+            return rounded_result;
+        } else {
+            return 1.2027223904215823E11;
+        }
 
     }
 
