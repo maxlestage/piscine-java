@@ -61,8 +61,8 @@ public class CelestialObject {
         double calc = (x_distance * x_distance) + (y_distance * y_distance) + (z_distance * z_distance);
         double square_result = Math.sqrt(calc);
         // double rounded_result = Math.round(square_result * 1000.0) / 1000.0;
-        // double rounded_result = Math.ceil(square_result);
-        double rounded_result = square_result;
+        double rounded_result = Math.ceil(square_result);
+        // double rounded_result = square_result;
 
         System.out.println("getDistanceBetween");
         System.out.println("earth");
