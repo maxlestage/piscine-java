@@ -60,6 +60,8 @@ public class Star extends CelestialObject {
 
     public Star() {
         super();
+        magnitude = 0;
+
     }
 
     public Star(String name_value, double x_value, double y_value, double z_value, double magnitude_value) {
