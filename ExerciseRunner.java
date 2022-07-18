@@ -1,12 +1,9 @@
-import java.util.List;
-
 // import java.util.List;
 // import java.time.Duration;
 // import java.time.LocalDate;
 // import java.time.LocalDateTime;
 // import java.time.LocalTime;
 // import java.time.Period;
-// import java.util.List;
 // import java.util.Set;
 
 public class ExerciseRunner {
@@ -264,9 +261,13 @@ public class ExerciseRunner {
                  */
 
                 // SortBis
-                System.out.println(SortBis.sort(List.of(15, 1, 14, 18, 14, 98, 54, -1, 12)).toString());
-                System.out.println(SortBis.sortReverse(List.of(15, 1, 14, 18, 14, 98, 54, -1, 12))
-                                .toString());
+                /*
+                 * System.out.println(SortBis.sort(List.of(15, 1, 14, 18, 14, 98, 54, -1,
+                 * 12)).toString());
+                 * System.out.println(SortBis.sortReverse(List.of(15, 1, 14, 18, 14, 98, 54, -1,
+                 * 12))
+                 * .toString());
+                 */
 
                 // KeepTheChange
                 // System.out.println(KeepTheChange.computeChange(18, Set.of(1, 3, 7)));
@@ -346,6 +347,28 @@ public class ExerciseRunner {
                 // celestialObject3));
                 // System.out.println();
                 // System.out.println(CelestialObject.KM_IN_ONE_AU);
+
+                // StarUtils
+                CelestialObject celestialObject = new CelestialObject();
+                CelestialObject earth = new CelestialObject("Terre", 1.0, 2.0, 2.0);
+                CelestialObject earth1 = new CelestialObject("Terre", 1.0, 2.0, 2.0);
+                CelestialObject earth2 = new CelestialObject("Terre", 1333.322220, 2243.009887, 2.23330);
+
+                System.out.println();
+                System.out.println("celestialObject");
+                System.out.println(celestialObject.toString());
+
+                System.out.println();
+                System.out.println("earth");
+                System.out.println(earth.toString());
+
+                System.out.println();
+                System.out.println("earth1");
+                System.out.println(earth1.toString());
+
+                System.out.println();
+                System.out.println("earth2");
+                System.out.println(earth2.toString());
         }
 
 }

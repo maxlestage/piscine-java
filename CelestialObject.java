@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class CelestialObject {
 
     public double x;
@@ -85,6 +87,24 @@ public class CelestialObject {
         double result = getDistanceBetween(defaultStar, earth) * KM_IN_ONE_AU;
         // System.out.println("getDistanceBetweenInKm");
         // System.out.println(result);
+        return result;
+
+    }
+
+    @Override
+    public String toString() {
+        // String response = celestialObject.getName() + "is positioned at"
+        // + (celestialObject.getX() + ',' + celestialObject.getY() + ',' +
+        // celestialObject.getZ());
+
+        DecimalFormat df_obj = new DecimalFormat("#.###");
+        String x = df_obj.format(this.getX());
+        String y = df_obj.format(this.getY());
+        String z = df_obj.format(this.getZ());
+
+        String result = this.getName() + "is positioned at"
+                + "(" + x + ", " + y + ", " +
+                z + ")";
         return result;
 
     }
