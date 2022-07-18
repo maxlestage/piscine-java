@@ -1,4 +1,7 @@
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
+import java.util.Objects;
 
 public class CelestialObject {
 
@@ -97,16 +100,33 @@ public class CelestialObject {
         // + (celestialObject.getX() + ',' + celestialObject.getY() + ',' +
         // celestialObject.getZ());
 
-        DecimalFormat df_obj = new DecimalFormat("#.###");
-        String x = df_obj.format(this.getX());
-        String y = df_obj.format(this.getY());
-        String z = df_obj.format(this.getZ());
+        DecimalFormat df = new DecimalFormat("#.000", new DecimalFormatSymbols(Locale.ENGLISH));
+        String x = String.valueOf(df.format(this.getX()));
+        String y = String.valueOf(df.format(this.getY()));
+        String z = String.valueOf(df.format(this.getZ()));
 
-        String result = this.getName() + "is positioned at"
+        String result = this.getName() + " is positioned at"
                 + "(" + x + ", " + y + ", " +
                 z + ")";
+
         return result;
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        CelestialObject that = (CelestialObject) o;
+        return Double.compare(that.x, this.x) == 0 && Double.compare(that.y,
+                this.y) == 0 && Double.compare(that.z, this.z) == 0 && name.equals(that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y, z, name);
     }
 
 }

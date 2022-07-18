@@ -369,6 +369,14 @@ public class ExerciseRunner {
                 System.out.println();
                 System.out.println("earth2");
                 System.out.println(earth2.toString());
+
+                System.out.println();
+                System.out.println("earth.equals(earth1)");
+                System.out.println(earth.equals(earth1));
+
+                System.out.println();
+                System.out.println("earth.equals(celestialObject)");
+                System.out.println(earth.equals(celestialObject));
         }
 
 }
