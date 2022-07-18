@@ -17,7 +17,7 @@ public class CelestialObject {
         this.x = 0.0;
         this.y = 0.0;
         this.z = 0.0;
-
+        this.name = "Soleil";
         this.name = "Soleil";
     }
 
