@@ -7,11 +7,6 @@ public class Star extends CelestialObject {
 
     private double magnitude;
 
-    public double x;
-    public double y;
-    public double z;
-    public String name;
-
     /**
      * @return double return the magnitude
      */
@@ -62,7 +57,6 @@ public class Star extends CelestialObject {
         super();
         System.out.println(this.getName());
         magnitude = 0;
-
     }
 
     public Star(String name_value, double x_value, double y_value, double z_value, double magnitude_value) {

@@ -14,9 +14,9 @@ public class CelestialObject {
     public static double KM_IN_ONE_AU = 150_000_000;
 
     public CelestialObject() {
-        this.x = 0.0;
-        this.y = 0.0;
-        this.z = 0.0;
+        x = 0.0;
+        y = 0.0;
+        z = 0.0;
         this.name = "Soleil";
         this.name = "Soleil";
     }
