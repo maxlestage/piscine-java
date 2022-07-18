@@ -1,12 +1,13 @@
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Sort {
 
     public static List<Integer> sort(List<Integer> list) {
         if (list != null) {
-            List<Integer> sortedList = list.stream().sorted().collect(Collectors.toList());
+            List<Integer> sortedList = new ArrayList<>(list);
+            sortedList.sort(Comparator.naturalOrder());
             return sortedList;
         } else {
             return null;
@@ -17,11 +18,13 @@ public class Sort {
     public static List<Integer> sortReverse(List<Integer> list) {
 
         if (list != null) {
-            List<Integer> sortedList = list.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+            List<Integer> sortedList = new ArrayList<>(list);
+            sortedList.sort(Comparator.reverseOrder());
             return sortedList;
         } else {
             return null;
         }
         // [98,54,18,15,14,14,12,1,-1]
     }
+
 }
