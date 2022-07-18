@@ -353,6 +353,8 @@ public class ExerciseRunner {
                 CelestialObject earth = new CelestialObject("Terre", 1.0, 2.0, 2.0);
                 CelestialObject earth1 = new CelestialObject("Terre", 1.0, 2.0, 2.0);
                 CelestialObject earth2 = new CelestialObject("Terre", 1333.322220, 2243.009887, 2.23330);
+                CelestialObject altair = new CelestialObject("Altair", 12.450, 328.844, -328.392);
+                // 12.450, 328.844, -328.392
 
                 System.out.println();
                 System.out.println("celestialObject");
@@ -369,6 +371,10 @@ public class ExerciseRunner {
                 System.out.println();
                 System.out.println("earth2");
                 System.out.println(earth2.toString());
+
+                System.out.println();
+                System.out.println("altair");
+                System.out.println(altair.toString());
 
                 System.out.println();
                 System.out.println("earth.equals(earth1)");

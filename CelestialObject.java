@@ -105,7 +105,7 @@ public class CelestialObject {
         String y = String.valueOf(df.format(this.getY()));
         String z = String.valueOf(df.format(this.getZ()));
 
-        String result = this.getName() + " is positioned at"
+        String result = this.getName() + " is positioned at "
                 + "(" + x + ", " + y + ", " +
                 z + ")";
 
