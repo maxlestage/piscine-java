@@ -60,6 +60,7 @@ public class Star extends CelestialObject {
 
     public Star() {
         super();
+        System.out.println(this.getName());
         magnitude = 0;
 
     }
