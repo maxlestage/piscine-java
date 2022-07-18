@@ -383,6 +383,16 @@ public class ExerciseRunner {
                 System.out.println();
                 System.out.println("earth.equals(celestialObject)");
                 System.out.println(earth.equals(celestialObject));
+
+                System.out.println();
+                System.out.println("Star : ");
+                // Star
+                Star star = new Star();
+                System.out.println(star.getName());
+                System.out.println(star.getX());
+                System.out.println(star.getY());
+                System.out.println(star.getZ());
+                System.out.println(star.getMagnitude());
         }
 
 }
