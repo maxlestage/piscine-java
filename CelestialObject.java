@@ -8,6 +8,7 @@ public class CelestialObject {
     public double x;
     public double y;
     public double z;
+
     public String name;
 
     public static double KM_IN_ONE_AU = 150_000_000;
@@ -16,6 +17,7 @@ public class CelestialObject {
         this.x = 0.0;
         this.y = 0.0;
         this.z = 0.0;
+
         this.name = "Soleil";
     }
 
