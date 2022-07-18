@@ -13,10 +13,10 @@ public class CelestialObject {
     public static double KM_IN_ONE_AU = 150_000_000;
 
     public CelestialObject() {
-        x = 0.0;
-        y = 0.0;
-        z = 0.0;
-        name = "Soleil";
+        this.x = 0.0;
+        this.y = 0.0;
+        this.z = 0.0;
+        this.name = "Soleil";
     }
 
     public CelestialObject(String name_value, double x_value, double y_value, double z_value) {
