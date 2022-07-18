@@ -65,41 +65,19 @@ public class CelestialObject {
         double z_distance = earth.getZ() - defaultStar.getZ();
         double calc = (x_distance * x_distance) + (y_distance * y_distance) + (z_distance * z_distance);
         double square_result = Math.sqrt(calc);
-        // double rounded_result = Math.round(square_result * 1000.0) / 1000.0;
-        // double rounded_result = Math.ceil(square_result);
         double rounded_result = square_result;
-
-        // System.out.println("getDistanceBetween");
-        // System.out.println("earth");
-        // System.out.println(earth.getX() + " ; " + earth.getY() + " ; " +
-        // earth.getZ());
-        // System.out.println();
-        // System.out.println("defaultStar");
-        // System.out.println(defaultStar.getX() + " ; " + defaultStar.getY() + " ; " +
-        // defaultStar.getZ());
-        // System.out.println();
-        // System.out.println(rounded_result);
-
         return rounded_result;
 
     }
 
     public static double getDistanceBetweenInKm(CelestialObject defaultStar,
             CelestialObject earth) {
-
         double result = getDistanceBetween(defaultStar, earth) * KM_IN_ONE_AU;
-        // System.out.println("getDistanceBetweenInKm");
-        // System.out.println(result);
         return result;
-
     }
 
     @Override
     public String toString() {
-        // String response = celestialObject.getName() + "is positioned at"
-        // + (celestialObject.getX() + ',' + celestialObject.getY() + ',' +
-        // celestialObject.getZ());
-
         DecimalFormat df = new DecimalFormat("#.000", new DecimalFormatSymbols(Locale.ENGLISH));
         String x = String.valueOf(df.format(this.getX()));
         String y = String.valueOf(df.format(this.getY()));
@@ -110,7 +88,6 @@ public class CelestialObject {
                 z + ")";
 
         return result;
-
     }
 
     @Override

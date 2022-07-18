@@ -349,50 +349,63 @@ public class ExerciseRunner {
                 // System.out.println(CelestialObject.KM_IN_ONE_AU);
 
                 // StarUtils
-                CelestialObject celestialObject = new CelestialObject();
-                CelestialObject earth = new CelestialObject("Terre", 1.0, 2.0, 2.0);
-                CelestialObject earth1 = new CelestialObject("Terre", 1.0, 2.0, 2.0);
-                CelestialObject earth2 = new CelestialObject("Terre", 1333.322220, 2243.009887, 2.23330);
-                CelestialObject altair = new CelestialObject("Altair", 12.450, 328.844, -328.392);
-                // 12.450, 328.844, -328.392
+                // CelestialObject celestialObject = new CelestialObject();
+                // CelestialObject earth = new CelestialObject("Terre", 1.0, 2.0, 2.0);
+                // CelestialObject earth1 = new CelestialObject("Terre", 1.0, 2.0, 2.0);
+                // CelestialObject earth2 = new CelestialObject("Terre", 1333.322220,
+                // 2243.009887, 2.23330);
+                // CelestialObject altair = new CelestialObject("Altair", 12.450, 328.844,
+                // -328.392);
+                // // 12.450, 328.844, -328.392
 
-                System.out.println();
-                System.out.println("celestialObject");
-                System.out.println(celestialObject.toString());
+                // System.out.println();
+                // System.out.println("celestialObject");
+                // System.out.println(celestialObject.toString());
 
-                System.out.println();
-                System.out.println("earth");
-                System.out.println(earth.toString());
+                // System.out.println();
+                // System.out.println("earth");
+                // System.out.println(earth.toString());
 
-                System.out.println();
-                System.out.println("earth1");
-                System.out.println(earth1.toString());
+                // System.out.println();
+                // System.out.println("earth1");
+                // System.out.println(earth1.toString());
 
-                System.out.println();
-                System.out.println("earth2");
-                System.out.println(earth2.toString());
+                // System.out.println();
+                // System.out.println("earth2");
+                // System.out.println(earth2.toString());
 
-                System.out.println();
-                System.out.println("altair");
-                System.out.println(altair.toString());
+                // System.out.println();
+                // System.out.println("altair");
+                // System.out.println(altair.toString());
 
-                System.out.println();
-                System.out.println("earth.equals(earth1)");
-                System.out.println(earth.equals(earth1));
+                // System.out.println();
+                // System.out.println("earth.equals(earth1)");
+                // System.out.println(earth.equals(earth1));
 
-                System.out.println();
-                System.out.println("earth.equals(celestialObject)");
-                System.out.println(earth.equals(celestialObject));
+                // System.out.println();
+                // System.out.println("earth.equals(celestialObject)");
+                // System.out.println(earth.equals(celestialObject));
 
-                System.out.println();
-                System.out.println("Star : ");
                 // Star
+                // System.out.println();
+                // System.out.println("Star : ");
+                // Star star = new Star();
+                // System.out.println(star.getName());
+                // System.out.println(star.getX());
+                // System.out.println(star.getY());
+                // System.out.println(star.getZ());
+                // System.out.println(star.getMagnitude());
+
+                System.out.println();
+                System.out.println("StarOverride : ");
                 Star star = new Star();
-                System.out.println(star.getName());
-                System.out.println(star.getX());
-                System.out.println(star.getY());
-                System.out.println(star.getZ());
-                System.out.println(star.getMagnitude());
+                Star star2 = new Star();
+                Star proxima = new Star("Proxima", 18.389, 832.32, 218, 0.4);
+
+                System.out.println(star.toString());
+                System.out.println(proxima.toString());
+                System.out.println(star.equals(star2));
+                System.out.println(star.equals(proxima));
         }
 
 }
