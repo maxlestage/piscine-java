@@ -1,3 +1,4 @@
+import java.util.List;
 
 // import java.util.List;
 // import java.time.Duration;
@@ -262,6 +263,11 @@ public class ExerciseRunner {
                  * 12)).toString());
                  */
 
+                // SortBis
+                System.out.println(SortBis.sort(List.of(15, 1, 14, 18, 14, 98, 54, -1, 12)).toString());
+                System.out.println(SortBis.sortReverse(List.of(15, 1, 14, 18, 14, 98, 54, -1, 12))
+                                .toString());
+
                 // KeepTheChange
                 // System.out.println(KeepTheChange.computeChange(18, Set.of(1, 3, 7)));
 
@@ -304,21 +310,21 @@ public class ExerciseRunner {
                  * System.out.println(defaultStar.getName());
                  */
 
-                CelestialObject defaultStar = new CelestialObject();
-                CelestialObject earth = new CelestialObject("Terre", 1.0, 2.0, 2.0);
+                // CelestialObject defaultStar = new CelestialObject();
+                // CelestialObject earth = new CelestialObject("Terre", 1.0, 2.0, 2.0);
                 // CelestialObject celestialObject1 = new CelestialObject("Altair", 12.45,
                 // 328.8437, -328.3923);
                 // CelestialObject celestialObject2 = new CelestialObject("Vega", 489.31,
                 // -12.473, 218.43);
                 // CelestialObject celestialObject3 = new CelestialObject();
-                CelestialObject earth2 = new CelestialObject();
-                System.out.println("Test getDistanceWith : ");
-                System.out.println(earth.getDistanceWith(defaultStar));
-                System.out.println();
-                System.out.println("Test getDistanceBetween : earth2 = () ");
-                System.out.println(CelestialObject.getDistanceBetween(defaultStar, earth2));
-                System.out.println("Test getDistanceWithInKm :  ");
-                System.out.println(earth.getDistanceWithInKm(defaultStar));
+                // CelestialObject earth2 = new CelestialObject();
+                // System.out.println("Test getDistanceWith : ");
+                // System.out.println(earth.getDistanceWith(defaultStar));
+                // System.out.println();
+                // System.out.println("Test getDistanceBetween : earth2 = () ");
+                // System.out.println(CelestialObject.getDistanceBetween(defaultStar, earth2));
+                // System.out.println("Test getDistanceWithInKm : ");
+                // System.out.println(earth.getDistanceWithInKm(defaultStar));
                 // System.out.println();
                 // System.out.println(CelestialObject.getDistanceBetweenInKm(defaultStar,
                 // earth));
