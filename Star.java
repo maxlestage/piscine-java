@@ -1,6 +1,7 @@
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
+import java.util.Objects;
 
 public class Star extends CelestialObject {
 
@@ -67,14 +68,28 @@ public class Star extends CelestialObject {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if (!(o instanceof Star)) {
+            return false;
+        }
+        Star star = (Star) o;
+        return magnitude == star.magnitude && x == star.x && y == star.y && z == star.z
+                && Objects.equals(name, star.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(magnitude, x, y, z, name);
+    }
+
+    @Override
     public String toString() {
-        // Soleil shines at the 0.000 magnitude
         DecimalFormat df = new DecimalFormat("0.000", new DecimalFormatSymbols(Locale.ENGLISH));
-
         String magnitude = String.valueOf(df.format(this.magnitude));
-
         String result = super.getName() + " shines at the " + magnitude + " magnitude";
-
         return result;
     }
+
 }
