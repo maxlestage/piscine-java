@@ -59,9 +59,7 @@ public class Star extends CelestialObject {
     }
 
     public Star() {
-        x = 0.0;
-        y = 0.0;
-        z = 0.0;
+        super();
         name = "Soleil";
     }
 
