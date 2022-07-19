@@ -3,22 +3,22 @@ import java.util.List;
 
 public class Galaxy extends CelestialObject {
 
-    private List<CelestialObject> CelestialObject;
+    private List<CelestialObject> celestialObjects;
 
     public Galaxy() {
-        this.CelestialObject = new ArrayList<>();
+        this.celestialObjects = new ArrayList<>();
     }
 
     public void setCelestialObject(List<CelestialObject> CelestialObject) {
-        this.CelestialObject = CelestialObject;
+        this.celestialObjects = CelestialObject;
     }
 
     public void addCelestialObject(CelestialObject celestialObjet) {
-        CelestialObject.add(celestialObjet);
+        celestialObjects.add(celestialObjet);
     }
 
     public List<CelestialObject> getCelestialObjects() {
-        return this.CelestialObject;
+        return this.celestialObjects;
     }
 
 }
