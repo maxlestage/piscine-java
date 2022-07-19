@@ -1,4 +1,3 @@
-
 public class Palindrome {
     public static Boolean isPalindrome(String s) {
 
@@ -10,7 +9,7 @@ public class Palindrome {
                     reversed = new StringBuilder(part).reverse().toString();
                 }
             }
-            return reversed.toUpperCase().equals(s.toUpperCase());
+            return reversed.equalsIgnoreCase(s);
         } else {
             return false;
         }

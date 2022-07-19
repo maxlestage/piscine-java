@@ -20,11 +20,7 @@ public class ListEqual {
                 // si index 0 différent de "" :
                 if (list1.get(0) != "" && list2.get(0) != "") {
                     // si l
-                    if (list1.equals(list2)) {
-                        return true;
-                    } else {
-                        return false;
-                    }
+                    return list1.equals(list2);
                 } else {
                     return false;
                 }

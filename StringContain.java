@@ -4,11 +4,7 @@ public class StringContain {
         if (subString != null && s != null && subString != "" && s != "") {
             char firstWord = subString.charAt(0);
             char secondWord = s.charAt(0);
-            if (firstWord == secondWord) {
-                return true;
-            } else {
-                return false;
-            }
+            return firstWord == secondWord;
         } else {
             return false;
         }

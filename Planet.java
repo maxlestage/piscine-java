@@ -47,9 +47,8 @@ public class Planet extends CelestialObject {
     public String toString() {
         DecimalFormat df = new DecimalFormat("0.000", new DecimalFormatSymbols(Locale.ENGLISH));
         String distanceWithCenterStar = String.valueOf(df.format(getDistanceBetween(this.centerStar, this)));
-        String result = getName() + " circles around " + centerStar.name + " at the "
+        return getName() + " circles around " + centerStar.name + " at the "
                 + distanceWithCenterStar + " AU";
-        return result;
     }
 
 }

@@ -1,9 +1,8 @@
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Locale;
-import java.time.format.DateTimeFormatter;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 public class FormatDate {
 
@@ -11,7 +10,7 @@ public class FormatDate {
         if (dateTime != null) {
             if (dateTime.toString() != "") {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
-                        "'Le' d LLL 'de l\''an' YYYY 'à' kk'h'mm'm' 'et' ss's'", Locale.FRANCE);
+                        "'Le' d LLL 'de l''an' YYYY 'à' kk'h'mm'm' 'et' ss's'", Locale.FRANCE);
                 String text = dateTime.format(formatter);
                 return text;
             } else {
