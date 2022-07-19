@@ -1,4 +1,4 @@
-// import java.util.List;
+import java.util.List;
 // import java.time.Duration;
 // import java.time.LocalDate;
 // import java.time.LocalDateTime;
@@ -409,13 +409,31 @@ public class ExerciseRunner {
                 // System.out.println(star.equals(proxima));
 
                 // Planet
-               /* Planet earth = new Planet();
-                Planet naboo = new Planet("Naboo", 17.4389, 8349.1, 8943.92,
-                                new Star("Betelgeuse", 128.23, -12.82, 32.328, 1289.3));
+                /*
+                 * Planet earth = new Planet();
+                 * Planet naboo = new Planet("Naboo", 17.4389, 8349.1, 8943.92,
+                 * new Star("Betelgeuse", 128.23, -12.82, 32.328, 1289.3));
+                 * 
+                 * System.out.println(naboo.toString());
+                 * System.out.println(earth.toString());
+                 * System.out.println(naboo.getCenterStar().toString());
+                 */
 
-                System.out.println(naboo.toString());
-                System.out.println(earth.toString());
-                System.out.println(naboo.getCenterStar().toString());*/
+                // Galaxy
+                Galaxy galaxy = new Galaxy();
+                CelestialObject lune = new CelestialObject("Lune", -123.12, 392.238, 32.31);
+                Star betelgeuse = new Star("Betelgeuse", 128.23, -12.82, 32.328, 1289.3);
+                Planet naboo = new Planet("Naboo", 17.4389, 8349.1, 8943.92, betelgeuse);
+
+                galaxy.addCelestialObject(lune);
+                galaxy.addCelestialObject(betelgeuse);
+                galaxy.addCelestialObject(naboo);
+
+                List<CelestialObject> celestialObjects = galaxy.getCelestialObjects();
+
+                for (CelestialObject celestialObject : celestialObjects) {
+                        System.out.println(celestialObject.toString());
+                }
 
         }
 
