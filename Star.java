@@ -12,6 +12,7 @@ public class Star extends CelestialObject {
      */
     public double getMagnitude() {
         return magnitude;
+
     }
 
     /**
@@ -55,14 +56,14 @@ public class Star extends CelestialObject {
 
     public Star() {
         super();
-        System.out.println(this.getName());
         magnitude = 0;
     }
 
     public Star(String name_value, double x_value, double y_value, double z_value, double magnitude_value) {
         super(name_value, x_value, y_value, z_value);
         this.magnitude = magnitude_value;
-        System.out.println(name_value + " " + x_value + " " + y_value + " " + z_value + " " + magnitude_value);
+        // System.out.println(name_value + " " + x_value + " " + y_value + " " + z_value
+        // + " " + magnitude_value);
     }
 
     @Override
