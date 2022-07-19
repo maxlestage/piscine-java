@@ -26,27 +26,21 @@ public class Planet extends CelestialObject {
         this.centerStar = centerStar;
     }
 
-    /*
-     * Finally, we rewrite the toString method. The returned String must have the
-     * following format : <name> circles around <centerStar.name> at the
-     * <distanceWithCenterStar> AU. The distanceWithCenterStar is computed using the
-     * distanceBetween method with the planet and its center star.
-     */
-
     @Override
     public boolean equals(Object o) {
-        if (o == this)
+        if (this == o)
             return true;
-        if (!(o instanceof Planet)) {
+        if (o == null || getClass() != o.getClass())
             return false;
-        }
+        if (!super.equals(o))
+            return false;
         Planet planet = (Planet) o;
-        return Objects.equals(centerStar, planet.centerStar);
+        return centerStar.equals(planet.centerStar);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(centerStar);
+        return Objects.hash(super.hashCode(), centerStar);
     }
 
     @Override
