@@ -21,9 +21,17 @@ public class Planet extends CelestialObject {
     }
 
     public Planet(String name, double x, double y, double z, Star centerStar) {
+
         super(name, x, y, z);
         this.centerStar = centerStar;
     }
+
+    /*
+     * Finally, we rewrite the toString method. The returned String must have the
+     * following format : <name> circles around <centerStar.name> at the
+     * <distanceWithCenterStar> AU. The distanceWithCenterStar is computed using the
+     * distanceBetween method with the planet and its center star.
+     */
 
     @Override
     public boolean equals(Object o) {
@@ -40,13 +48,6 @@ public class Planet extends CelestialObject {
     public int hashCode() {
         return Objects.hashCode(centerStar);
     }
-
-    /*
-     * Finally, we rewrite the toString method. The returned String must have the
-     * following format : <name> circles around <centerStar.name> at the
-     * <distanceWithCenterStar> AU. The distanceWithCenterStar is computed using the
-     * distanceBetween method with the planet and its center star.
-     */
 
     @Override
     public String toString() {
