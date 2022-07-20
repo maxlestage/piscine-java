@@ -488,20 +488,35 @@ public class ExerciseRunner {
                 // System.out.println(galaxy.computeMassRepartition().toString());
 
                 // Character
+                /*
+                 * Character aragorn = new Character("Aragorn", 20);
+                 * Character uruk = new Character("Uruk", 5);
+                 * 
+                 * System.out.println(aragorn.toString());
+                 * System.out.println(uruk.toString());
+                 * 
+                 * aragorn.attack(uruk);
+                 * 
+                 * System.out.println(uruk.toString());
+                 * 
+                 * aragorn.takeDamage(12);
+                 * 
+                 * System.out.println(aragorn.toString());
+                 * 
+                 */
+
+                // AdventureUtils
+                System.out.println(Character.printStatus());
+
                 Character aragorn = new Character("Aragorn", 20);
-                Character uruk = new Character("Uruk", 5);
+                Character uruk = new Character("Uruk", 15);
 
-                System.out.println(aragorn.toString());
-                System.out.println(uruk.toString());
+                System.out.println(Character.printStatus());
 
-                aragorn.attack(uruk);
+                Character winner = Character.fight(aragorn, uruk);
 
-                System.out.println(uruk.toString());
-
-                aragorn.takeDamage(12);
-
-                System.out.println(aragorn.toString());
-
+                System.out.println(winner.toString());
+                System.out.println(Character.printStatus());
         }
 
 }

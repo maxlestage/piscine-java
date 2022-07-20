@@ -1,31 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Character {
-    /*
-     * Instructions
-     * 
-     * In the following quest, we will work with the same files and classes. You
-     * should keep them from one exercise to the following.
-     * 
-     * Create a file Character.java.
-     * 
-     * Create a public class named Character.
-     * The class must contains three properties :
-     * 
-     * maxHealth (int) : with a getter and no setter. This property is not updatable
-     * (final keyword).
-     * currentHealth (int) : with a getter and no setter.
-     * name (String) : with a getter and no setter. This property is not updatable
-     * (final keyword).
-     * 
-     * Create a constructor with two parameters (name and maxHealth) : the
-     * currentHealth is initialized with the maxHealth value.
-     * 
-     * 
-     * 
-     * 
-     */
+
     private final int maxHealth;
     private int currentHealth;
     private final String name;
+
+    private static List<Character> allCharacters = new ArrayList<>();
 
     public String getName() {
         return this.name;
@@ -43,16 +25,8 @@ public class Character {
         this.name = name;
         this.maxHealth = maxHealth;
         this.currentHealth = maxHealth;
+        allCharacters.add(this);
     }
-
-    /*
-     * Rewrite the toString,
-     * that will
-     * have the format<name>:*<currentHealth>/<maxHealth>.
-     * If the
-     * currentHealth is 0,
-     * the format is<name>:KO.
-     */
 
     @Override
     public String toString() {
@@ -63,15 +37,6 @@ public class Character {
         }
     }
 
-    /*
-     * Implement two methods :
-     * 
-     * takeDamage, with an integer parameter, that will remove the amount in
-     * parameter to the currentHealth. The current health can't be lower than 0.
-     * attack, with a Character parameter, that will call takeDamage of the
-     * parameter with a default value : 9.
-     */
-
     public void takeDamage(int dammagedValue) {
         this.currentHealth = currentHealth - dammagedValue;
     }
@@ -81,6 +46,16 @@ public class Character {
         if (personnage.currentHealth <= 0) {
             personnage.currentHealth = 0;
         }
+    }
+
+    public static String printStatus() {
+        for (Character character : allCharacters) {
+            return character.toString();
+        }
+    }
+
+    public static Character fight(Character personnage1, Character personnage2) {
+        return null;
     }
 
 }
