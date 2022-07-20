@@ -20,7 +20,7 @@ public class Planet extends CelestialObject {
         centerStar = new Star();
     }
 
-    public Planet(String name, double x, double y, double z, Star centerStar, Integer massProperty_value) {
+    public Planet(String name, double x, double y, double z, Star centerStar, int massProperty_value) {
         super(name, x, y, z, massProperty_value);
         this.centerStar = centerStar;
     }

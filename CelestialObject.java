@@ -11,7 +11,7 @@ public class CelestialObject {
 
     public String name;
 
-    private Integer mass;
+    private int mass;
 
     public static double KM_IN_ONE_AU = 150_000_000;
 
@@ -24,7 +24,7 @@ public class CelestialObject {
     }
 
     public CelestialObject(String name_value, double x_value, double y_value, double z_value,
-            Integer mass_value) {
+            int mass_value) {
         x = x_value;
         y = y_value;
         z = z_value;
@@ -48,7 +48,7 @@ public class CelestialObject {
         return name;
     }
 
-    public Integer getMass() {
+    public int getMass() {
         return this.mass;
     }
 
@@ -68,7 +68,7 @@ public class CelestialObject {
         this.name = name;
     }
 
-    public void setMass(Integer mass) {
+    public void setMass(int mass) {
         this.mass = mass;
     }
 

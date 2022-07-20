@@ -25,11 +25,11 @@ public class Galaxy {
 
     public Map<String, Integer> computeMassRepartition() {
 
-        Map<String, Integer> data = new HashMap<String, Integer>();
+        Map<String, Integer> data = new HashMap<>();
 
-        Integer massStar = 0;
-        Integer massPlanet = 0;
-        Integer massOther = 0;
+        int massStar = 0;
+        int massPlanet = 0;
+        int massOther = 0;
 
         // Star, Planet or Other
         for (CelestialObject objet : this.celestialObjects) {
