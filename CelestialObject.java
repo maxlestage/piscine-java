@@ -11,6 +11,8 @@ public class CelestialObject {
 
     public String name;
 
+    private Integer massProperty;
+
     public static double KM_IN_ONE_AU = 150_000_000;
 
     public CelestialObject() {
@@ -20,11 +22,13 @@ public class CelestialObject {
         this.name = "Soleil";
     }
 
-    public CelestialObject(String name_value, double x_value, double y_value, double z_value) {
+    public CelestialObject(String name_value, double x_value, double y_value, double z_value,
+            Integer massProperty_value) {
         x = x_value;
         y = y_value;
         z = z_value;
         name = name_value;
+        massProperty = massProperty_value;
     }
 
     public double getX() {
@@ -43,6 +47,10 @@ public class CelestialObject {
         return name;
     }
 
+    public Integer getMassProperty() {
+        return this.massProperty;
+    }
+
     public void setX(double x) {
         this.x = x;
     }
@@ -57,6 +65,10 @@ public class CelestialObject {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setMassProperty(Integer massProperty) {
+        this.massProperty = massProperty;
     }
 
     public static double getDistanceBetween(CelestialObject defaultStar, CelestialObject earth) {
