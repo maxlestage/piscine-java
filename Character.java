@@ -23,9 +23,9 @@ public class Character {
      * 
      * 
      */
-    final int maxHealth;
+    private final int maxHealth;
     private int currentHealth;
-    final String name;
+    private final String name;
 
     public String getName() {
         return this.name;
