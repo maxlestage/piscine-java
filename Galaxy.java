@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Galaxy extends CelestialObject {
+public class Galaxy {
 
     private List<CelestialObject> celestialObjects;
 

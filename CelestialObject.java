@@ -20,6 +20,7 @@ public class CelestialObject {
         y = 0.0;
         z = 0.0;
         this.name = "Soleil";
+        mass = 0;
     }
 
     public CelestialObject(String name_value, double x_value, double y_value, double z_value,
