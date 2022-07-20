@@ -27,21 +27,21 @@ public class Galaxy extends CelestialObject {
 
         Map<String, Integer> data = new HashMap<String, Integer>();
 
-        Integer massPropertyStar = 0;
-        Integer massPropertyPlanet = 0;
-        Integer massPropertyOther = 0;
+        Integer massStar = 0;
+        Integer massPlanet = 0;
+        Integer massOther = 0;
 
         // Star, Planet or Other
         for (CelestialObject objet : this.celestialObjects) {
             if (objet.getClass() == Star.class) {
-                massPropertyStar = massPropertyStar + objet.getMassProperty();
-                data.put("Star", massPropertyStar);
+                massStar = massStar + objet.getMass();
+                data.put("Star", massStar);
             } else if (objet.getClass() == Planet.class) {
-                massPropertyPlanet = massPropertyPlanet + objet.getMassProperty();
-                data.put("Planet", massPropertyPlanet);
+                massPlanet = massPlanet + objet.getMass();
+                data.put("Planet", massPlanet);
             } else {
-                massPropertyOther = massPropertyOther + objet.getMassProperty();
-                data.put("Other", massPropertyOther);
+                massOther = massOther + objet.getMass();
+                data.put("Other", massOther);
             }
         }
         return data;
