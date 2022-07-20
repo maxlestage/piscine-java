@@ -78,6 +78,9 @@ public class Character {
 
     public void attack(Character personnage) {
         personnage.takeDamage(9);
+        if (personnage.currentHealth <= 0) {
+            personnage.currentHealth = 0;
+        }
     }
 
 }
