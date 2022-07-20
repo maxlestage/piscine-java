@@ -31,6 +31,10 @@ public class Galaxy {
         int massPlanet = 0;
         int massOther = 0;
 
+        data.put("Planet", massPlanet);
+        data.put("Star", massStar);
+        data.put("Other", massOther);
+
         // Star, Planet or Other
         for (CelestialObject objet : this.celestialObjects) {
             if (objet.getClass() == Star.class) {
