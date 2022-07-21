@@ -59,12 +59,12 @@ public class Character {
         for (int i = 1; i < allCharacters.size(); i++) {
 
             buffer = buffer
-                    + (" - " + (allCharacters.get(i).toString()));
+                    + (" - " + (allCharacters.get(i).toString() + "\n"));
 
         }
 
         return ("------------------------------------------\nCharacters currently fighting :\n" + buffer
-                + "\n------------------------------------------");
+                + "------------------------------------------");
     }
 
     public static Character fight(Character personnage1, Character personnage2) {
