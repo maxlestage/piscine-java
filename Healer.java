@@ -5,12 +5,7 @@ public interface Healer {
      * getHealCapacity which returns an integer.
      */
 
-    default void heal(Character character) {
+    public void heal(Character character);
 
-    }
-
-    default int getHealCapacity(int healCapacityLevel) {
-        return healCapacityLevel;
-    }
-
+    public int getHealCapacity(int healCapacityLevel);
 }

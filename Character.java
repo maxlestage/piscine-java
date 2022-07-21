@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Character implements Tank, Healer {
+public class Character {
 
     private final int maxHealth;
     private int currentHealth;
