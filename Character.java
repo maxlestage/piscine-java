@@ -49,13 +49,41 @@ public class Character {
     }
 
     public static String printStatus() {
-        for (Character character : allCharacters) {
-            return character.toString();
+
+        if (allCharacters.isEmpty()) {
+            return ("------------------------------------------\nNobody's fighting right now !\n------------------------------------------");
         }
+
+        String buffer = (" - " + allCharacters.get(0).toString() + "\n");
+
+        for (int i = 1; i < allCharacters.size(); i++) {
+
+            buffer = buffer
+                    + (" - " + (allCharacters.get(i).toString()));
+
+        }
+
+        return ("------------------------------------------\nCharacters currently fighting :\n" + buffer
+                + "\n------------------------------------------");
     }
 
     public static Character fight(Character personnage1, Character personnage2) {
-        return null;
-    }
+        while (personnage1.getCurrentHealth() > 0 && personnage2.getCurrentHealth() > 0) {
+            personnage1.attack(personnage2);
+            if (personnage2.currentHealth > 0) {
+                personnage2.attack(personnage1);
+            }
+        }
 
+        if (personnage1.currentHealth == 0) {
+            return personnage2;
+        }
+
+        if (personnage2.currentHealth == 0) {
+            return personnage1;
+        }
+
+        return null;
+
+    }
 }
